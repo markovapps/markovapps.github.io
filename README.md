@@ -18,10 +18,10 @@ In github repo setting enable Source: Deploy from brunch "gh-pages"
 
 ```bash
 # generate output folder
-npx next build
+npm run build
 
 # push to gh-pages branch. 
-npx gh-pages -d out
+npm run deploy
 ```
 
 ### Deploy with pipelines
