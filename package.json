@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "npx next dev --turbo",
-		"build": "npx next build && touch out/.nojekyll",
+		"build": "npx next build && npx cpy /additional out/",
 		"start": "npx next start",
 		"lint": "npx eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
 		"deploy": "npx gh-pages -d out"
