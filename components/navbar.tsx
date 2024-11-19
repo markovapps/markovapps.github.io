@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,28 +9,27 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import {
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+  Dropdown,
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/button";
+
+import { ContactDevs } from "./buttons";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-  ImagePng,
-} from "@/components/icons";
-import { ContactDevs } from "./buttons";
+import { Logo, ImagePng } from "@/components/icons";
 
 export const Navbar = () => {
+  const pathName = usePathname();
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
@@ -36,9 +37,10 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">Markteem</p>
+            <p className="font-bold text-inherit">{siteConfig.name}</p>
           </NextLink>
         </NavbarBrand>
+
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
@@ -48,6 +50,7 @@ export const Navbar = () => {
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
+                data-active={pathName === item.href ? "true" : "false"}
                 href={item.href}
               >
                 <ImagePng src={item.icon} />
@@ -56,6 +59,40 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
+
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                // endContent={<Logo>}
+                radius="sm"
+                variant="light"
+              >
+                Политика конфиденциальности
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[340px]"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            {siteConfig.privacyPolicyNavItems.map((item) => (
+              <DropdownItem
+                key={item.href}
+                description={"Политика конфиденциальности: "}
+                href={item.href}
+                startContent={<ImagePng src={item.icon} />}
+              >
+                {item.label}
+              </DropdownItem>
+            ))}
+          </DropdownMenu>
+        </Dropdown>
       </NavbarContent>
 
       <NavbarContent
@@ -81,7 +118,7 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
-                  index === 2
+                  index === 1
                     ? "primary"
                     : index === siteConfig.navMenuItems.length - 1
                       ? "danger"

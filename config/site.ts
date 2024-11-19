@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
+  name: "Markovapps",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
@@ -24,6 +24,18 @@ export const siteConfig = {
     {
       label: "TimeSheet",
       href: "/timesheet",
+      icon: "/timesheet.png",
+    },
+  ],
+  privacyPolicyNavItems: [
+    {
+      label: "Welpeny",
+      href: "/welpeny/privacypolicy",
+      icon: "/welpeny.png",
+    },
+    {
+      label: "TimeSheet",
+      href: "/timesheet/privacypolicy",
       icon: "/timesheet.png",
     },
   ],
