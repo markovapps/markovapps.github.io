@@ -1,20 +1,20 @@
-import { siteConfig } from "@/config/site";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
-import React, { CSSProperties, ReactNode } from 'react';
+import React, { CSSProperties } from "react";
+
+import { siteConfig } from "@/config/site";
 
 interface Props {
-    style?: CSSProperties;
+  style?: CSSProperties;
 }
 export const ContactDevs: React.FC<Props> = ({ style }) => (
-    <Button
-        style={style}
-        as={Link}
-        className="text-sm font-normal text-default-600 bg-default-100"
-        href={siteConfig.links.contactUs}
-        // startContent={<HeartFilledIcon className="text-danger" />}
-        variant='solid'
-    >
-        Связаться с разработчиками
-    </Button>
-)
+  <Button
+    as={Link}
+    className="text-sm font-normal text-default-600 bg-default-100"
+    href={siteConfig.links.contactUs}
+    style={style}
+    variant="solid"
+  >
+    Связаться с разработчиками
+  </Button>
+);

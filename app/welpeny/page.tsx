@@ -7,7 +7,7 @@ export default function AboutPage() {
     <>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-xl text-center justify-center">
-          <div className={title({ color: 'green' })}>Welpeny </div> <br />
+          <div className={title({ color: "green" })}>Welpeny </div> <br />
           <div className={title({ size: "sm" })}>
             приложение для отслеживания доходов и расходов
           </div>
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <li>Вводить суммы заработков и трат</li>
             <li>
               Присваивать транзакциям соответствующие категории (например,
-              "Еда", "Транспорт", "Развлечения")
+              &quot;Еда&quot;, &quot;Транспорт&quot;, &quot;Развлечения&quot;)
             </li>
             <li>
               Просматривать детализированную статистику по категориям за любой

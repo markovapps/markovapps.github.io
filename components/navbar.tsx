@@ -84,7 +84,7 @@ export const Navbar = () => {
             {siteConfig.privacyPolicyNavItems.map((item) => (
               <DropdownItem
                 key={item.href}
-                description={"Политика конфиденциальности: "}
+                description={"Политика конфиденциальности:"}
                 href={item.href}
                 startContent={<ImagePng src={item.icon} />}
               >
