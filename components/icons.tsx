@@ -1,6 +1,20 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import Image from 'next/image';
+
+export const ImagePng = ({
+  size = 24,
+  src,
+  alt = 'logo'
+}) => (
+  <Image
+    src={src} // Path to your PNG image
+    alt={alt}
+    width={size} // Desired width
+    height={size} // Desired height
+  />
+)
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -9,17 +23,14 @@ export const Logo: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <svg
-    fill="none"
+    fill="currentColor"
     height={size || height}
-    viewBox="0 0 32 32"
+    viewBox="0 -960 960 960"
     width={size || width}
     {...props}
   >
     <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
+      d="m240-198 79-32q-10-29-18.5-59T287-349l-47 32v119Zm160-42h160q18-40 29-97.5T600-455q0-99-33-187.5T480-779q-54 48-87 136.5T360-455q0 60 11 117.5t29 97.5Zm80-200q-33 0-56.5-23.5T400-520q0-33 23.5-56.5T480-600q33 0 56.5 23.5T560-520q0 33-23.5 56.5T480-440Zm240 242v-119l-47-32q-5 30-13.5 60T641-230l79 32ZM480-881q99 72 149.5 183T680-440l84 56q17 11 26.5 29t9.5 38v237l-199-80H359L160-80v-237q0-20 9.5-38t26.5-29l84-56q0-147 50.5-258T480-881Z"
     />
   </svg>
 );

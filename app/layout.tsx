@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import { ContactDevs } from "@/components/buttons";
 
 export const metadata: Metadata = {
   title: {
@@ -46,17 +47,16 @@ export default function RootLayout({
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
+
+              <div style={{ textAlign: 'center', backgroundColor: 'var(--primary-color)' }}>
+                <div style={{marginTop: 16}}> Свяжитесь с нами, если у Вас есть вопросы, предложения, хотите оставить отзыв, отчет об ошибке и т.д.</div>
+                <div style={{marginTop: 16}}>Мы постараемся помочь Вам в кратчайшие сроки!</div>
+                <div style={{marginTop: 16}}>Спасибо, что пользуетесь нашим приложением и помогаете его развивать.</div>
+                <ContactDevs style={{marginTop: 24}}/>
+              </div>
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
+            <footer className="w-full flex items-center justify-center py-3" style={{marginTop: 24}}>
+              <p><span className="text-default-600">© 2024 Kanstantsin Markau & Hanna Markava</span></p>
             </footer>
           </div>
         </Providers>

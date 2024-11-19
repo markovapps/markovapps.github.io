@@ -3,10 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
-		"build": "next build",
-		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+		"dev": "npx next dev --turbo",
+		"build": "npx next build && touch out/.nojekyll",
+		"start": "npx next start",
+		"lint": "npx eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"deploy": "npx gh-pages -d out"
 	},
 	"dependencies": {
 		"@nextui-org/button": "2.0.38",
