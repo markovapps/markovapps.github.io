@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: 'https://markteem.github.io/'
+  basePath: '/',
+  reactStrictMode: true,
   /* config options here */
 };
 
