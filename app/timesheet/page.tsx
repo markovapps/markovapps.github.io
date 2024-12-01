@@ -1,22 +1,22 @@
 import { Divider } from "@nextui-org/divider";
+import React from "react";
 
 import { bodyText, subtitle, title } from "@/components/primitives";
+import { HeroSection } from "@/components/HeroSection";
+import Slider from "../../components/Slider";
+import Benefits from "../../components/Benefits";
+import Screenshots from "../../components/Screenshots";
+import UserReviews from "../../components/UserReviews";
+import CallToAction from "../../components/CallToAction";
 
-export default function PricingPage() {
+export default function TimeSheetPage() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-xl text-center justify-center">
-          <span className={title({ color: "violet" })}>Timesheet </span>
-          <span className={title()}>календарь рабочего времени</span>
-
-          <div className={subtitle({ class: "mt-4" })}>
-            Отслеживание отработанного времени и дохода при почасовой оплате
-          </div>
-        </div>
-      </section>
-
-      <Divider />
+        <Slider/>
+        <Benefits/>
+        <Screenshots/>
+        <UserReviews/>
+        <CallToAction/>
 
       <section className="text-center">
         <p className={bodyText({ size: "md" })}>
@@ -32,7 +32,6 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <Divider />
     </>
   );
 }

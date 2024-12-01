@@ -13,3 +13,6 @@ body {
    box-sizing: border-box;
 }
 
+#screenshots .animate-slide {
+   scroll-behavior: smooth;
+}
