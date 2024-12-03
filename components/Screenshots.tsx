@@ -4,23 +4,37 @@ import {title} from "@/components/primitives";
 import {subtitle} from "./primitives";
 import {content} from "../config/content";
 
-const Screenshots: React.FC = () => {
+type ScreenshotsProps = {
+    data: {
+        screenshotsTitle: string;
+        screenshots: [
+            {
+                img: string;
+                title: string;
+            }
+        ]
+    }
+};
+
+const Screenshots: React.FC = ({data}: ScreenshotsProps) => {
+
     return (
-        <section id="screenshots" className="bg-white py-12">
+        <section id="screenshots" className="relative bg-cover bg-center bg-no-repeat py-16">
             <div className="container mx-auto text-center">
                 <div className="mb-8">
-                    <h2 className="text-3xl font-semibold">Screenshots</h2>
-                    <p className="text-lg text-gray-600">We showcase only the best websites, portfolios, and landing pages built with passion, simplicity, and creativity!</p>
+                    <h2 className="text-3xl font-semibold">Основные экраны приложения</h2>
+                    <p className="text-lg text-gray-600">{data.screenshotsTitle}</p>
                 </div>
 
-                {/* Horizontal Scroll with Auto-scroll */}
-                <div className="relative overflow-hidden">
-                    {/* Container for images with flexbox */}
-                    <div className="flex space-x-6 animate-slide">
-                        {/* Each image is placed inside a div with appropriate width and spacing */}
-                        {content.screenshots.map((screen, index) => (
-                            <div key={index} className="flex-shrink-0 w-1/4 sm:w-1/4 md:w-1/4 lg:w-1/4">
-                                <img src={screen.img} alt={screen.title} className="w-full h-auto object-cover rounded-lg" />
+                <div className="relative">
+                    <div className="flex space-x-6 overflow-x-auto scroll-smooth scrollbar-hide">
+                        {data.screenshots.map((screen, index) => (
+                            <div key={index} className="flex-shrink-0 w-3/4 sm:w-1/2 md:w-1/4 lg:w-1/5">
+                                <img
+                                    src={screen.img}
+                                    alt={screen.title}
+                                    className="w-full h-auto object-cover rounded-lg"
+                                />
                             </div>
                         ))}
                     </div>

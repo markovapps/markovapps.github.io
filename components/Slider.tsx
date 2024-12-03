@@ -1,17 +1,26 @@
 import React from 'react';
-import {siteConfig} from "@/config/site";
 import {title} from "@/components/primitives";
-import {subtitle} from "./primitives";
+import {subtitle} from "@/components/primitives";
 
-const Slider: React.FC = () => {
+type SliderProps = {
+    data: {
+        name: string;
+        secondName: string;
+        subtitle: string;
+        mainScreen: string;
+        links: {
+            google: string;
+            ios: string;
+        };
+    };
+};
+
+const Slider: React.FC = ({data}: SliderProps) => {
     return (
         <section
             id="slider"
-            className="relative bg-cover bg-center bg-no-repeat py-28 flex items-center justify-center"
-            style={{
-                backgroundImage: siteConfig.background, // Replace with your background image
-            }}
-        >
+            className="relative bg-cover bg-center bg-no-repeat py-28 flex items-center justify-center">
+
             <div className="slide--item">
                 <div className="container">
                     <div className="flex items-center justify-between w-full">
@@ -27,26 +36,23 @@ const Slider: React.FC = () => {
                         {/* Left side (title, subtitle, buttons) */}
                         <div className="w-full md:w-1/2 pt-100 wow fadeInUp" data-wow-duration="1s">
                             <div className="slide--headline">
-                                <span className={title({color: "violet"})}>Timesheet </span>
-                                <span className={title()}>календарь рабочего времени</span>
+                                <span className={title({color: "violet"})}>{data.name}: </span>
+                                <span className={title()}>{data.secondName}</span>
                             </div>
-                            <div className={subtitle({ class: "mt-4" })}>
-                                Отслеживание отработанного времени и дохода при почасовой оплате
-                            </div>
+                            <div className={subtitle({class: "mt-4"})}>{data.subtitle}</div>
 
                             <div className="slide--action cta mt-6 flex">
-                                <a className="btn-hover" href="#">
+                                <a className="btn-hover" href={data.links.ios}>
                                     <img src="/appstore.png" alt="download appstore"/>
                                 </a>
-                                <a className="btn-hover ml-4" href="#">
+                                <a className="btn-hover ml-4" href={data.links.google}>
                                     <img src="/playstore.png" alt="download playstore"/>
                                 </a>
                             </div>
                         </div>
 
-                        {/* Right side (image) */}
                         <div className="w-full md:w-1/2 flex justify-end items-center">
-                            <img src="/01.png" alt="screens" className="w-3/4" />
+                            <img src={data.mainScreen} alt="screens" className="w-3/4"/>
                         </div>
                     </div>
                 </div>

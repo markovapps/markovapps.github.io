@@ -13,7 +13,7 @@ export const siteConfig = {
     {
       label: "TimeSheet",
       href: "/timesheet",
-      icon: "/timesheet.png",
+      icon: "/timesheet/logo.png",
     },
   ],
   navMenuItems: [

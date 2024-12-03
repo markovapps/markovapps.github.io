@@ -6,7 +6,7 @@ import {Providers} from "./providers";
 
 import {siteConfig} from "@/config/site";
 import {fontSans} from "@/config/fonts";
-import {Navbar} from "@/components/navbar";
+import {NavigationBar} from "@/components/navigationBar";
 import React from "react";
 import {Footer} from "../components/Footer";
 
@@ -44,7 +44,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{attribute: "class", defaultTheme: "light"}}>
           <div className="relative flex flex-col h-screen">
-            <Navbar/>
+            <NavigationBar/>
             <main className="mx-auto">
               {children}
             </main>

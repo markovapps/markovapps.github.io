@@ -1,27 +1,38 @@
 import React from 'react';
-import {siteConfig} from "@/config/site";
-import {title} from "@/components/primitives";
-import {subtitle} from "./primitives";
 
-const CallToAction: React.FC = () => {
+type CallToActionProps = {
+    data: {
+        name: string;
+        links: {
+            google: string;
+            ios: string;
+        };
+    };
+};
+
+const CallToAction: React.FC = ({ data }: CallToActionProps) => {
     return (
-        <section id="cta" className="section cta text-center pb-0">
-            <div className="container">
-                <div className="row clearfix">
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <div className="heading heading-1 mb-50 text--center wow fadeInUp" data-wow-duration="1s">
-                            <h2 className="heading--title">Download & install appy now</h2>
-                        </div>
-                    </div>
+        <section id="cta" className="relative bg-cover bg-center bg-no-repeat py-16 text-center">
+            <div className="container mx-auto">
+                <div className="mb-8">
+                    <h2 className="text-3xl font-bold">Скачай и установи {data.name} сейчас</h2>
                 </div>
-                <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 mb-100 wow fadeInUp" data-wow-duration="1s">
-                        <a className="btn-hover" href="#"><img src="assets/images/appstore.png" alt="download appstore" /></a>
-                        <a className="btn-hover" href="#"><img src="assets/images/playstore.png" alt="download playstore" /></a>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-12 wow fadeInUp" data-wow-duration="1s">
-                        <img src="assets/images/mockup/2-layers.png" alt="mockup" />
-                    </div>
+
+                <div className="flex justify-center gap-4 mb-8">
+                    <a href={data.links.ios} className="inline-block">
+                        <img
+                            src="/appstore.png"
+                            alt="Download on App Store"
+                            className="h-12 w-auto"
+                        />
+                    </a>
+                    <a href={data.links.google} className="inline-block">
+                        <img
+                            src="/playstore.png"
+                            alt="Get it on Google Play"
+                            className="h-12 w-auto"
+                        />
+                    </a>
                 </div>
             </div>
         </section>
