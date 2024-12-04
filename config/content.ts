@@ -2,6 +2,7 @@ export const content = {
     timeSheet: {
         name: "Timesheet",
         secondName: "Табель учета рабочего времени",
+        path: "/timesheet",
         logo: "/timesheet/logo.png",
         subtitle: "Отслеживание отработанного времени и дохода при почасовой оплате",
         description: "Приложение для учета отработанных часов и расчета заработной платы для работников с почасовой оплатой и гибким графиком. Фиксируйте рабочие часы и переработки в удобном календаре и приложение автоматически рассчитает ваш доход. Добавлена поддержка популярных графиков смен, таких как \"два через два\", \"сутки трое\". Подходит для работников вахтовым методом и со скользящим графиком. Календарь рабочего времени очень прост и удобен в использовании.",
@@ -79,6 +80,10 @@ export const content = {
             google: "https://play.google.com/store/apps/details?id=com.themark.apps.salarysheet",
             ios: "https://apps.apple.com/us/app/timesheet-paycheck-calculator/id6503091221",
             contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLSd6gJTIKvnUloDoGS9DiCnu5-ISSbyZBFymcrwmm5g-stWMWw/viewform?usp=sharing',
+            privacyPolicy: "/timesheet/privacypolicy"
         }
+    },
+    welpeny: {
+
     }
 };

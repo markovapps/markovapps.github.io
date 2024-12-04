@@ -1,19 +1,14 @@
 "use client";
 
-import {usePathname} from "next/navigation";
-
 import React from "react";
 
-export const Footer = () => {
+type FooterProps = {
+    data: {
+        name: string;
+    };
+};
 
-    const transformString = (input: string) => {
-        return input
-            .replace(/^\//, "") // Remove leading slash
-            .replace(/^\w/, (c) => c.toUpperCase()); // Capitalize first letter
-    }
-
-    const pathName = usePathname();
-    const appName = transformString(pathName);
+export const Footer = ({data}: FooterProps) => {
 
     return (
         <footer
@@ -22,7 +17,7 @@ export const Footer = () => {
         >
             <p>
                 <span className="text-[#999999] font-raleway text-sm font-normal">
-                &copy; 2024 {appName}, created by Kanstantsin Markau & Hanna Markava
+                &copy; 2024 {data.name}, created by Kanstantsin Markau & Hanna Markava
                 </span>
             </p>
         </footer>

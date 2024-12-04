@@ -14,17 +14,25 @@ import {link as linkStyles} from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import {usePathname} from "next/navigation";
-import {DropdownItem, DropdownMenu, DropdownTrigger, Dropdown} from "@nextui-org/dropdown";
-import {Button} from "@nextui-org/button";
 
 import {ContactDevs} from "./buttons";
 
-import {siteConfig} from "@/config/site";
 import {ThemeSwitch} from "@/components/theme-switch";
-import {Logo, ImagePng} from "@/components/icons";
+import {ImagePng} from "@/components/icons";
 import React from "react";
 
-export const NavigationBar = () => {
+type NavProps = {
+    data: {
+        name: string;
+        logo: string;
+        path: string;
+        links: {
+            privacyPolicy: string;
+        }
+    };
+};
+
+export const NavigationBar = ({data}: NavProps) => {
     const pathName = usePathname();
 
     return (
@@ -35,60 +43,27 @@ export const NavigationBar = () => {
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand as="li" className="gap-3">
-                    <NextLink href="/" className="flex items-center gap-1">
-                        <Logo alt="Company Logo"/>
-                        <span className="font-bold text-inherit">{siteConfig.name}</span>
+                    <NextLink href={data.path} className="flex items-center gap-1">
+                        <ImagePng src={data.logo} alt={`${data.name} icon`}/>
+                        <span className="font-bold text-inherit">{data.name}</span>
                     </NextLink>
                 </NavbarBrand>
 
-                <ul className="hidden lg:flex gap-6 ml-2">
-                    {siteConfig.navItems.map((item) => (
-                        <NavbarItem key={item.href}>
-                            <NextLink
-                                href={item.href}
-                                className={clsx(
-                                    linkStyles({color: "foreground"}),
-                                    "data-[active=true]:text-primary data-[active=true]:font-medium",
-                                )}
-                                color="foreground"
-                                data-active={pathName === item.href ? "true" : "false"}
-                            >
-                                <ImagePng src={item.icon} alt={`${item.label} icon`}/>
-                                {item.label}
-                            </NextLink>
-                        </NavbarItem>
-                    ))}
-                </ul>
-
-                {/* Dropdown for Privacy Policy */}
-                <Dropdown className="">
-                    <NavbarItem>
-                        <DropdownTrigger>
-                            <Button
-                                disableRipple
-                                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                                radius="sm"
-                                variant="light"
-                                aria-label="Open Privacy Policy Dropdown"
-                            >
-                                Политика конфиденциальности
-                            </Button>
-                        </DropdownTrigger>
+                <ul className="hidden lg:flex gap-6 ml-2 bg-transparent p-0">
+                    <NavbarItem key={data.links.privacyPolicy}>
+                        <NextLink
+                            href={data.links.privacyPolicy}
+                            className={clsx(
+                                linkStyles({color: "foreground"}),
+                                "data-[active=true]:text-primary data-[active=true]:font-medium",
+                            )}
+                            color="foreground"
+                            data-active={pathName === data.links.privacyPolicy ? "true" : "false"}
+                        >
+                            Политика конфиденциальности
+                        </NextLink>
                     </NavbarItem>
-                    <DropdownMenu aria-label="Privacy Policy Menu" className="w-72">
-                        {siteConfig.privacyPolicyNavItems.map((item) => (
-                            <DropdownItem
-                                key={item.href}
-                                description={"Политика конфиденциальности"}
-                                startContent={
-                                    <ImagePng src={item.icon} alt={`${item.label} icon`}/>
-                                }
-                            >
-                                <NextLink href={item.href}>{item.label}</NextLink>
-                            </DropdownItem>
-                        ))}
-                    </DropdownMenu>
-                </Dropdown>
+                </ul>
             </NavbarContent>
 
             {/* Right Section: Theme and Contact */}
@@ -113,23 +88,17 @@ export const NavigationBar = () => {
             {/* Mobile Menu */}
             <NavbarMenu>
                 <div className="flex flex-col gap-2 p-4">
-                    {siteConfig.navMenuItems.map((item, index) => (
-                        <NavbarMenuItem key={item.href}>
-                            <Link
-                                href={item.href}
-                                className={clsx(
-                                    "text-lg",
-                                    index === 1
-                                        ? "text-primary"
-                                        : index === siteConfig.navMenuItems.length - 1 &&
-                                        "text-danger"
-                                )}
-                                aria-label={`Navigate to ${item.label}`}
-                            >
-                                {item.label}
-                            </Link>
-                        </NavbarMenuItem>
-                    ))}
+                    <NavbarMenuItem key={data.links.privacyPolicy}>
+                        <Link
+                            href={data.links.privacyPolicy}
+                            className={clsx(
+                                "text-lg", "text-primary"
+                            )}
+                            aria-label={`Navigate to ${data.name}`}
+                        >
+                            Политика конфиденциальности
+                        </Link>
+                    </NavbarMenuItem>
                 </div>
             </NavbarMenu>
         </NextUINavbar>

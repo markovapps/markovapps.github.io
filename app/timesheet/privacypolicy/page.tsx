@@ -1,10 +1,13 @@
 import { title } from "@/components/primitives";
+import React from "react";
 
 export default function TimeSheetPrivacyPolicyPage() {
   return (
-    <div>
+      <section
+          className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center">
+      <div>
       <div className={title({ size: "sm" })}>
-        Timesheet: Политика конфиденциальности
+        Политика конфиденциальности Timesheet
       </div>
       <br />
       <br />
@@ -246,5 +249,6 @@ export default function TimeSheetPrivacyPolicyPage() {
         </a>
       </p>
     </div>
+      </section>
   );
 }
