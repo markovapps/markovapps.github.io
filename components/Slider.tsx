@@ -15,7 +15,7 @@ type SliderProps = {
     };
 };
 
-const Slider: React.FC = ({data}: SliderProps) => {
+const Slider: React.FC<SliderProps> = ({ data }) => {
     return (
         <section
             id="slider"

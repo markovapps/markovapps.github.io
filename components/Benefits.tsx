@@ -1,23 +1,18 @@
 import React from 'react';
-import {siteConfig} from "@/config/site";
-import {title} from "@/components/primitives";
 import {subtitle} from "./primitives";
-import {content} from "../config/content";
 
 type BenefitsProps = {
     data: {
         description: string;
-        benefits: [
-            {
-                icon: string;
-                title: string;
-                description: string;
-            }
-        ]
+        benefits: {
+            icon: string;
+            title: string;
+            description: string;
+        }[];
     };
 };
 
-const Benefits: React.FC = ({data}: BenefitsProps) => {
+const Benefits: React.FC<BenefitsProps> = ({ data }) => {
     return (
         <section id="benefits" className="relative bg-cover bg-center bg-no-repeat py-16">
             <div className="container mx-auto text-center">

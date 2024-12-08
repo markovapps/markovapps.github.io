@@ -3,10 +3,10 @@ import Image from "next/image";
 
 import { IconSvgProps } from "@/types";
 
-type ImageBtnProps = { size?: number; src: string };
-export const ImagePng: React.FC<ImageBtnProps> = ({ src, size = 24 }) => (
+type ImageBtnProps = { size?: number; src: string; alt?: string; };
+export const ImagePng: React.FC<ImageBtnProps> = ({ src, size = 24, alt }) => (
   <Image
-    alt={src}
+    alt={alt || src}
     height={size} // Desired height
     src={src} // Path to your PNG image
     width={size} // Desired width
