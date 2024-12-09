@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Markovapps",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "Make beautiful websites regardless of your design experience.", // TODO
+  background: "/17580.jpg",
   navItems: [
     {
       label: "Welpeny",
@@ -12,7 +13,7 @@ export const siteConfig = {
     {
       label: "TimeSheet",
       href: "/timesheet",
-      icon: "/timesheet.png",
+      icon: "/timesheet/logo.png",
     },
   ],
   navMenuItems: [

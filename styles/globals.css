@@ -13,3 +13,6 @@ body {
    box-sizing: border-box;
 }
 
+.no-grow {
+   flex-grow: 0.5;
+}
