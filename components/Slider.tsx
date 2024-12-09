@@ -25,14 +25,6 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                 <div className="container">
                     <div className="flex items-center justify-between w-full">
 
-                        {/*<div className="row">*/}
-                        {/*    <div className="col-xs-12 col-sm-12 col-md-12">*/}
-                        {/*        <div className="slide--logo mt-100 hidden-xs wow fadeInUp" data-wow-duration="1s">*/}
-                        {/*            <img src="/timesheet.png" alt="logo hero"/>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-
                         {/* Left side (title, subtitle, buttons) */}
                         <div className="w-full md:w-1/2 pt-100 wow fadeInUp" data-wow-duration="1s">
                             <div className="slide--headline">
@@ -41,7 +33,7 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                             </div>
                             <div className={subtitle({class: "mt-4"})}>{data.subtitle}</div>
 
-                            <div className="slide--action cta mt-6 flex">
+                            <div className=" mt-6 flex">
                                 <a className="btn-hover" href={data.links.ios}>
                                     <img src="/appstore.png" alt="download appstore"/>
                                 </a>
@@ -51,9 +43,12 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="w-full md:w-1/2 flex justify-end items-center">
+                        <div className="hidden md:flex w-full md:w-1/2 flex justify-end items-center">
                             <img src={data.mainScreen} alt="screens" className="w-3/4"/>
                         </div>
+                    </div>
+                    <div className="flex md:hidden w-full justify-center items-center pt-14 ">
+                            <img src={data.mainScreen} alt="screens" className="w-3/4"/>
                     </div>
                 </div>
             </div>

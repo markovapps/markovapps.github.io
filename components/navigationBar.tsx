@@ -28,6 +28,7 @@ type NavProps = {
         path: string;
         links: {
             privacyPolicy: string;
+            contactUs: string;
         }
     };
 };
@@ -41,15 +42,15 @@ export const NavigationBar = ({data}: NavProps) => {
             className="bg-background shadow-sm sticky top-0 z-50"
             maxWidth="xl"
         >
-            <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-                <NavbarBrand as="li" className="gap-3">
+            <NavbarContent className="basis-1/5 md:basis-full" justify="start">
+                <NavbarBrand as="li" className="no-grow">
                     <NextLink href={data.path} className="flex items-center gap-1">
                         <ImagePng src={data.logo} alt={`${data.name} icon`}/>
                         <span className="font-bold text-inherit">{data.name}</span>
                     </NextLink>
                 </NavbarBrand>
 
-                <ul className="hidden lg:flex gap-6 ml-2 bg-transparent p-0">
+                <ul className="hidden md:flex ml-2 bg-transparent p-0">
                     <NavbarItem key={data.links.privacyPolicy}>
                         <NextLink
                             href={data.links.privacyPolicy}
@@ -67,10 +68,7 @@ export const NavigationBar = ({data}: NavProps) => {
             </NavbarContent>
 
             {/* Right Section: Theme and Contact */}
-            <NavbarContent
-                className="hidden sm:flex basis-1/5 sm:basis-full"
-                justify="end"
-            >
+            <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="end">
                 <NavbarItem>
                     <ThemeSwitch aria-label="Toggle Theme"/>
                 </NavbarItem>
@@ -80,7 +78,7 @@ export const NavigationBar = ({data}: NavProps) => {
             </NavbarContent>
 
             {/* Mobile Menu Toggle */}
-            <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+            <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <ThemeSwitch aria-label="Toggle Theme"/>
                 <NavbarMenuToggle aria-label="Open Mobile Menu"/>
             </NavbarContent>
@@ -91,12 +89,19 @@ export const NavigationBar = ({data}: NavProps) => {
                     <NavbarMenuItem key={data.links.privacyPolicy}>
                         <Link
                             href={data.links.privacyPolicy}
-                            className={clsx(
-                                "text-lg", "text-primary"
-                            )}
+                            className={clsx("text-lg", "text-primary")}
                             aria-label={`Navigate to ${data.name}`}
                         >
                             Политика конфиденциальности
+                        </Link>
+                    </NavbarMenuItem>
+                    <NavbarMenuItem key={data.links.contactUs}>
+                        <Link
+                            href={data.links.contactUs}
+                            className={clsx("text-lg", "text-primary")}
+                            aria-label={`Navigate to ${data.name}`}
+                        >
+                            Связаться с разработчиками
                         </Link>
                     </NavbarMenuItem>
                 </div>

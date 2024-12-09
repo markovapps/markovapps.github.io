@@ -6,6 +6,7 @@ import Screenshots from "@/components/Screenshots";
 import CallToAction from "@/components/CallToAction";
 import {Divider} from "@nextui-org/divider";
 import {timeSheet} from "@/config/timesheet";
+import ContactUs from "@/components/ContactUs";
 
 export default function TimeSheetPage() {
     return (
@@ -17,6 +18,8 @@ export default function TimeSheetPage() {
             <Screenshots data={timeSheet}/>
             <Divider orientation="horizontal"/>
             <CallToAction data={timeSheet}/>
+            <Divider orientation="horizontal"/>
+            <ContactUs/>
         </>
     );
 }

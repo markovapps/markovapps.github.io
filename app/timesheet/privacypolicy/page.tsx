@@ -108,6 +108,7 @@ export default function TimeSheetPrivacyPolicyPage() {
               href="https://www.appodeal.com/home/privacy-policy/"
               rel="noopener noreferrer"
               target="_blank"
+              className="text-blue-600"
             >
               Appodeal
             </a>
@@ -117,6 +118,7 @@ export default function TimeSheetPrivacyPolicyPage() {
               href="https://expo.io/privacy"
               rel="noopener noreferrer"
               target="_blank"
+              className="text-blue-600"
             >
               Expo
             </a>
@@ -126,6 +128,7 @@ export default function TimeSheetPrivacyPolicyPage() {
               href="https://www.revenuecat.com/privacy"
               rel="noopener noreferrer"
               target="_blank"
+              className="text-blue-600"
             >
               RevenueCat
             </a>
@@ -244,6 +247,7 @@ export default function TimeSheetPrivacyPolicyPage() {
           href="https://app-privacy-policy-generator.nisrulz.com/"
           rel="noopener noreferrer"
           target="_blank"
+          className="text-blue-600"
         >
           App Privacy Policy Generator
         </a>

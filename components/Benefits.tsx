@@ -29,7 +29,7 @@ const Benefits: React.FC<BenefitsProps> = ({ data }) => {
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold">{feature.title}</h3>
-                                <p className="text-gray-500">{feature.description}</p>
+                                <p className="text-default-500">{feature.description}</p>
                             </div>
                         </div>
                     ))}
