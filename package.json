@@ -7,6 +7,7 @@
 		"build": "npx next build && npx copyfiles --all --flat additional/* out/",
 		"start": "npx next start",
 		"lint": "npx eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"predeploy": "node validate-files.js",
 		"deploy": "npx gh-pages -d out"
 	},
 	"dependencies": {
