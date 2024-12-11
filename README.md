@@ -27,3 +27,10 @@ npm run deploy
 
 1. In github repo setting enable Source: Git hub account
 2. Commit and push `master` brunch
+
+## Dependencies
+
+```shell
+# check for updates
+npx npm-check-updates -u
+```
