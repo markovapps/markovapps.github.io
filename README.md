@@ -25,8 +25,9 @@ npm run deploy
 
 ### Deploy with pipelines
 
-1. In github repo setting enable Source: Git hub account
-2. Commit and push `master` brunch
+1. in nextjs.yaml uncomment branches: ["master"]
+2. In github repo setting enable Source: Git hub account
+3. Commit and push `master` brunch
 
 ## Dependencies
 

@@ -1,0 +1,23 @@
+name: Validate Required Files
+
+on:
+    # Runs on pushes targeting the default branch
+    push:
+        branches: ["gh-pages"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Validate Required Files
+        run: |
+          REQUIRED_FILES=(".nojekyll" "app-ads.txt")
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Error: Required file $file is missing."
+              exit 1
+            fi
+          done
