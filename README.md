@@ -23,7 +23,7 @@ npm run build
 npm run deploy
 ```
 
-### Deploy with pipelines
+### Deploy with pipelines (doesn't work)
 
 1. in nextjs.yaml uncomment branches: ["master"]
 2. In github repo setting enable Source: Git hub account
