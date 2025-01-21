@@ -1,11 +1,11 @@
-import "@/styles/globals.css";
 import {Viewport} from "next";
 import clsx from "clsx";
+import React from "react";
+import "@/styles/globals.css";
 
 import {Providers} from "./providers";
 
 import {fontSans} from "@/config/fonts";
-import React from "react";
 
 export const viewport: Viewport = {
     themeColor: [

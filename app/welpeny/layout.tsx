@@ -1,4 +1,5 @@
 import React from "react";
+
 import {NavigationBar} from "@/components/navigationBar";
 import {welpeny} from "@/config/welpeny";
 import {Footer} from "@/components/Footer";

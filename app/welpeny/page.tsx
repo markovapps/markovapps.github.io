@@ -1,10 +1,10 @@
 import React from "react";
+import {Divider} from "@nextui-org/divider";
 
 import Slider from "@/components/Slider";
 import Benefits from "@/components/Benefits";
 import Screenshots from "@/components/Screenshots";
 import CallToAction from "@/components/CallToAction";
-import {Divider} from "@nextui-org/divider";
 import {welpeny} from "@/config/welpeny";
 import ContactUs from "@/components/ContactUs";
 

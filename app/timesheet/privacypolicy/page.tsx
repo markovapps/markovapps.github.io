@@ -1,5 +1,6 @@
-import {title} from "@/components/primitives";
 import React from "react";
+
+import {title} from "@/components/primitives";
 
 export default function TimeSheetPrivacyPolicyPage() {
     return (
@@ -28,7 +29,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                     This information may include information such as
                 </p>
                 <ul className="list-disc list-inside indent-2">
-                    <li>Your device's Internet Protocol address (e.g. IP address)</li>
+                    <li>Your device&apos;s Internet Protocol address (e.g. IP address)</li>
                     <li>The pages of the Application that you visit, the time and date of your visit, the time spent
                         on those pages
                     </li>
@@ -80,70 +81,70 @@ export default function TimeSheetPrivacyPolicyPage() {
                     <ul>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://www.google.com/policies/privacy/"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 Google Play Services
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://support.google.com/admob/answer/6128543?hl=en"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 AdMob
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://firebase.google.com/support/privacy"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 Google Analytics for Firebase
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://www.appodeal.com/home/privacy-policy/"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 Appodeal
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://expo.io/privacy"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 Expo
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://www.applovin.com/privacy/"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 AppLovin
                             </a>
                         </li>
                         <li>
                             <a
+                                className="text-blue-600"
                                 href="https://www.revenuecat.com/privacy"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                className="text-blue-600"
                             >
                                 RevenueCat
                             </a>

@@ -14,12 +14,12 @@ import {link as linkStyles} from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import {usePathname} from "next/navigation";
+import React from "react";
 
 import {ContactDevs} from "./buttons";
 
 import {ThemeSwitch} from "@/components/theme-switch";
 import {ImagePng} from "@/components/icons";
-import React from "react";
 
 type NavProps = {
     data: {

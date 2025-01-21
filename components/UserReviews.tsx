@@ -1,7 +1,4 @@
 import React from 'react';
-import {siteConfig} from "@/config/site";
-import {title} from "@/components/primitives";
-import {subtitle} from "./primitives";
 
 interface Testimonial {
     author: string;
@@ -53,7 +50,7 @@ const UserReviews: React.FC = () => {
                                         </div>
                                         <div className="testimonial--rating pull-right">
                                             {[...Array(5)].map((_, i) => (
-                                                <i key={i} className={`fa ${i < Math.floor(testimonial.rating) ? 'fa-star' : (i < testimonial.rating ? 'fa-star-half-full' : 'fa-star-o')}`}></i>
+                                                <i key={i} className={`fa ${i < Math.floor(testimonial.rating) ? 'fa-star' : (i < testimonial.rating ? 'fa-star-half-full' : 'fa-star-o')}`}/>
                                             ))}
                                         </div>
                                     </div>

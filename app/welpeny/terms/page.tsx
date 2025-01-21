@@ -1,5 +1,6 @@
-import {title} from "@/components/primitives";
 import React from "react";
+
+import {title} from "@/components/primitives";
 
 export default function WelpenyTermsPage() {
     return (
@@ -17,8 +18,8 @@ export default function WelpenyTermsPage() {
                 <br/>
                 <p>
                     These terms and conditions apply to the Welpeny app
-                    (hereby referred to as "Application") for mobile devices that was created by
-                    Kanstantsin Markau &amp; Hanna Markava (hereby referred to as "Service Provider") as an Ad
+                    (hereby referred to as &quot;Application&quot;) for mobile devices that was created by
+                    Kanstantsin Markau &amp; Hanna Markava (hereby referred to as &quot;Service Provider&quot;) as an Ad
                     Supported and Commercial service.
                 </p>
                 <br/>
@@ -46,7 +47,7 @@ export default function WelpenyTermsPage() {
                     security of your phone and access to the Application. The Service Provider strongly advise against
                     jailbreaking or rooting your phone, which involves removing software restrictions and limitations
                     imposed by the official operating system of your device. Such actions could expose your phone to
-                    malware, viruses, malicious programs, compromise your phone's security features, and may result in
+                    malware, viruses, malicious programs, compromise your phone&apos;s security features, and may result in
                     the Application not functioning correctly or at all.
                 </p>
                 <div>
@@ -58,30 +59,30 @@ export default function WelpenyTermsPage() {
                     <ul>
                         <li>
                             <a
-                                href="https://www.appodeal.com/home/terms-of-service/"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className="text-blue-600"
+                                href="https://www.appodeal.com/home/terms-of-service/"
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 Appodeal
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://expo.io/terms"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className="text-blue-600"
+                                href="https://expo.io/terms"
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 Expo
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://www.revenuecat.com/terms"
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 className="text-blue-600"
+                                href="https://www.revenuecat.com/terms"
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 RevenueCat
                             </a>
@@ -99,7 +100,7 @@ export default function WelpenyTermsPage() {
                 <br/>
                 <p>
                     If you are using the application outside of a Wi-Fi area,
-                    please be aware that your mobile network provider's agreement terms still apply. Consequently, you
+                    please be aware that your mobile network provider&apos;s agreement terms still apply. Consequently, you
                     may incur charges from your mobile provider for data usage during the connection to the application,
                     or other third-party charges. By using the application, you accept responsibility for any such
                     charges, including roaming data charges if you use the application outside of your home territory
@@ -115,7 +116,7 @@ export default function WelpenyTermsPage() {
                     Service Provider cannot be held responsible.
                 </p>
                 <br/>
-                <p>In terms of the Service Provider's
+                <p>In terms of the Service Provider&apos;s
                     responsibility for your use of the application, it is important to note that while they strive to
                     ensure that it is updated and accurate at all times, they do rely on third parties to provide
                     information to them so that they can make it available to you. The Service Provider accepts no
@@ -161,10 +162,10 @@ export default function WelpenyTermsPage() {
                 <p>
                     This Terms and Conditions page was generated by {" "}
                     <a
-                        href="https://app-privacy-policy-generator.nisrulz.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="text-blue-600"
+                        href="https://app-privacy-policy-generator.nisrulz.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         App Privacy Policy Generator
                     </a>

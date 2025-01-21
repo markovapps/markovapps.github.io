@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {subtitle} from "./primitives";
 
 type BenefitsProps = {
