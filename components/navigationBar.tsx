@@ -28,6 +28,7 @@ type NavProps = {
         path: string;
         links: {
             privacyPolicy: string;
+            terms: string;
             contactUs: string;
         }
     };
@@ -42,9 +43,9 @@ export const NavigationBar = ({data}: NavProps) => {
             className="bg-background shadow-sm sticky top-0 z-50"
             maxWidth="xl"
         >
-            <NavbarContent className="basis-1/5 md:basis-full" justify="start">
+            <NavbarContent className="basis-1/5 md:basis-full flex-nowrap " justify="start">
                 <NavbarBrand as="li" className="no-grow">
-                    <NextLink href={data.path} className="flex items-center gap-1">
+                    <NextLink href={data.path} className="flex items-center gap-2">
                         <ImagePng src={data.logo} alt={`${data.name} icon`}/>
                         <span className="font-bold text-inherit">{data.name}</span>
                     </NextLink>
@@ -57,11 +58,27 @@ export const NavigationBar = ({data}: NavProps) => {
                             className={clsx(
                                 linkStyles({color: "foreground"}),
                                 "data-[active=true]:text-primary data-[active=true]:font-medium",
+                                "indent-6"
                             )}
                             color="foreground"
                             data-active={pathName === data.links.privacyPolicy ? "true" : "false"}
                         >
                             Политика конфиденциальности
+                        </NextLink>
+                    </NavbarItem>
+                </ul>
+                <ul className="hidden md:flex ml-2 bg-transparent p-0">
+                    <NavbarItem key={data.links.terms}>
+                        <NextLink
+                            href={data.links.terms}
+                            className={clsx(
+                                linkStyles({color: "foreground"}),
+                                "data-[active=true]:text-primary data-[active=true]:font-medium",
+                            )}
+                            color="foreground"
+                            data-active={pathName === data.links.terms ? "true" : "false"}
+                        >
+                            Условия использования
                         </NextLink>
                     </NavbarItem>
                 </ul>
@@ -93,6 +110,15 @@ export const NavigationBar = ({data}: NavProps) => {
                             aria-label={`Navigate to ${data.name}`}
                         >
                             Политика конфиденциальности
+                        </Link>
+                    </NavbarMenuItem>
+                    <NavbarMenuItem key={data.links.terms}>
+                        <Link
+                            href={data.links.terms}
+                            className={clsx("text-lg", "text-primary")}
+                            aria-label={`Navigate to ${data.name}`}
+                        >
+                            Условия использования
                         </Link>
                     </NavbarMenuItem>
                     <NavbarMenuItem key={data.links.contactUs}>
