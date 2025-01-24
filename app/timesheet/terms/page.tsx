@@ -1,8 +1,12 @@
 import React from "react";
 
 import {title} from "@/components/primitives";
+import {redirect} from "next/navigation";
 
 export default function TimeSheetTermsPage() {
+
+    redirect(`https://www.apple.com/legal/internet-services/itunes/dev/stdeula/`);
+
     return (
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center">
@@ -15,6 +19,7 @@ export default function TimeSheetTermsPage() {
                 <br/>
 
                 <strong>Terms &amp; Conditions</strong>
+                <p className="text-stone-400">Last Update: 2025-01-20</p>
                 <br/>
                 <p>
                     These terms and conditions apply to the Timesheet: Paycheck calculator app
@@ -187,7 +192,7 @@ export default function TimeSheetTermsPage() {
                 </p>
                 <br/>
                 <p>
-                    These terms and conditions are effective as of 2025-01-21
+                    These terms and conditions are effective as of 2024-07-20
                 </p>
                 <br/>
                 <strong>Contact Us</strong>

@@ -1,6 +1,7 @@
 import React from "react";
 
 import {title} from "@/components/primitives";
+import {subtitle} from "../../../components/primitives";
 
 export default function WelpenyPrivacyPolicyPage() {
     return (
@@ -13,6 +14,8 @@ export default function WelpenyPrivacyPolicyPage() {
             <br/>
 
             <strong>Privacy Policy</strong>
+            <p className="text-stone-400">Last Update: 2025-01-20</p>
+            <br/>
             <p>
                 This privacy policy is applicable to the Welpeny (hereinafter referred
                 to as &quot;Application&quot;) for mobile devices, which was developed
@@ -229,7 +232,7 @@ export default function WelpenyPrivacyPolicyPage() {
                 is deemed approval of all changes.
             </p>
             <br/>
-            <p>This privacy policy is effective as of 2025-01-21</p>
+            <p>This privacy policy is effective as of 2024-07-20</p>
             <br/>
             <strong>Your Consent</strong>
             <p>
