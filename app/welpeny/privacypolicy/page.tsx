@@ -1,7 +1,6 @@
 import React from "react";
 
 import {title} from "@/components/primitives";
-import {subtitle} from "../../../components/primitives";
 
 export default function WelpenyPrivacyPolicyPage() {
     return (
