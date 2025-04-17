@@ -74,7 +74,7 @@ export const picWipe = {
     links: {
         google: "",
         ios: "https://apps.apple.com/us/app/welpeny-finance-tracker/id6692627362",
-        contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLSd6gJTIKvnUloDoGS9DiCnu5-ISSbyZBFymcrwmm5g-stWMWw/viewform?usp=sharing',
+        contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLScHn1KucLJ2tBtm_QQRMStDl2NHYQDpkr_jPA97RWeg9wJP2A/viewform?usp=dialog',
         privacyPolicy: "/picwipe/privacypolicy",
         terms: "/picwipe/terms"
     }
