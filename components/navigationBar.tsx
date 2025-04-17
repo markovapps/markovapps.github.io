@@ -32,9 +32,14 @@ type NavProps = {
             contactUs: string;
         }
     };
+    localizedStrings: {
+        privacyPolicy: string;
+        terms: string;
+        contactDevelopers: string;
+    }
 };
 
-export const NavigationBar = ({data}: NavProps) => {
+export const NavigationBar = ({data, localizedStrings}: NavProps) => {
     const pathName = usePathname();
 
     return (
@@ -63,7 +68,7 @@ export const NavigationBar = ({data}: NavProps) => {
                             color="foreground"
                             data-active={pathName === data.links.privacyPolicy ? "true" : "false"}
                         >
-                            Политика конфиденциальности
+                            {localizedStrings.privacyPolicy}
                         </NextLink>
                     </NavbarItem>
                 </ul>
@@ -78,7 +83,7 @@ export const NavigationBar = ({data}: NavProps) => {
                             color="foreground"
                             data-active={pathName === data.links.terms ? "true" : "false"}
                         >
-                            Условия использования
+                            {localizedStrings.terms}
                         </NextLink>
                     </NavbarItem>
                 </ul>
@@ -90,7 +95,7 @@ export const NavigationBar = ({data}: NavProps) => {
                     <ThemeSwitch aria-label="Toggle Theme"/>
                 </NavbarItem>
                 <NavbarItem className="hidden md:flex">
-                    <ContactDevs aria-label="Contact Developers"/>
+                    <ContactDevs aria-label="Contact Developers" text={localizedStrings.contactDevelopers}/>
                 </NavbarItem>
             </NavbarContent>
 
@@ -109,7 +114,7 @@ export const NavigationBar = ({data}: NavProps) => {
                             className={clsx("text-lg", "text-primary")}
                             aria-label={`Navigate to ${data.name}`}
                         >
-                            Политика конфиденциальности
+                            {localizedStrings.privacyPolicy}
                         </Link>
                     </NavbarMenuItem>
                     <NavbarMenuItem key={data.links.terms}>
@@ -118,7 +123,7 @@ export const NavigationBar = ({data}: NavProps) => {
                             className={clsx("text-lg", "text-primary")}
                             aria-label={`Navigate to ${data.name}`}
                         >
-                            Условия использования
+                            {localizedStrings.terms}
                         </Link>
                     </NavbarMenuItem>
                     <NavbarMenuItem key={data.links.contactUs}>
@@ -127,7 +132,7 @@ export const NavigationBar = ({data}: NavProps) => {
                             className={clsx("text-lg", "text-primary")}
                             aria-label={`Navigate to ${data.name}`}
                         >
-                            Связаться с разработчиками
+                            {localizedStrings.contactDevelopers}
                         </Link>
                     </NavbarMenuItem>
                 </div>

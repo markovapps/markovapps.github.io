@@ -11,14 +11,17 @@ type BenefitsProps = {
             description: string;
         }[];
     };
+    localizedStrings: {
+        mainFeatures: string;
+    }
 };
 
-const Benefits: React.FC<BenefitsProps> = ({ data }) => {
+const Benefits: React.FC<BenefitsProps> = ({ data, localizedStrings }: BenefitsProps) => {
     return (
         <section id="benefits" className="relative bg-cover bg-center bg-no-repeat py-16">
             <div className="container mx-auto text-center">
                 <div className="mb-8">
-                    <h2 className="text-3xl font-semibold">Основные функции</h2>
+                    <h2 className="text-3xl font-semibold">{localizedStrings.mainFeatures}</h2>
                     <p className={subtitle()}>{data.description}</p>
                 </div>
 

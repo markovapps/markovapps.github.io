@@ -2,13 +2,14 @@ import React from "react";
 
 import {NavigationBar} from "@/components/navigationBar";
 import {timeSheet} from "@/config/timesheet";
+import {localizedStrings} from "@/config/localizedStrings";
 import {Footer} from "@/components/Footer";
 
-export default function TimeSheetLayout({children}: { children: React.ReactNode; }) {
+export default function TimeSheetLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <div className="flex flex-col h-screen">
             <header className="w-full">
-                <NavigationBar data={timeSheet}/>
+                <NavigationBar data={timeSheet} localizedStrings={localizedStrings.RUS}/>
             </header>
 
             <main className="flex-1 w-full px-2 sm:px-4 md:px-8 lg:px-16 xl:px-20 mx-auto">

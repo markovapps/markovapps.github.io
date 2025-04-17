@@ -38,9 +38,11 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                                 <a className="btn-hover" href={data.links.ios}>
                                     <img src="/appstore.png" alt="download appstore"/>
                                 </a>
+                                {data.links.google &&
                                 <a className="btn-hover ml-4" href={data.links.google}>
                                     <img src="/playstore.png" alt="download playstore"/>
                                 </a>
+                                }
                             </div>
                         </div>
 

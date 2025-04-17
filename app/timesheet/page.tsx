@@ -6,6 +6,7 @@ import Benefits from "@/components/Benefits";
 import Screenshots from "@/components/Screenshots";
 import CallToAction from "@/components/CallToAction";
 import {timeSheet} from "@/config/timesheet";
+import {localizedStrings} from "@/config/localizedStrings";
 import ContactUs from "@/components/ContactUs";
 
 export default function TimeSheetPage() {
@@ -13,13 +14,13 @@ export default function TimeSheetPage() {
         <>
             <Slider data={timeSheet}/>
             <Divider orientation="horizontal"/>
-            <Benefits data={timeSheet}/>
+            <Benefits data={timeSheet} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <Screenshots data={timeSheet}/>
+            <Screenshots data={timeSheet} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <CallToAction data={timeSheet}/>
+            <CallToAction data={timeSheet} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <ContactUs/>
+            <ContactUs localizedStrings={localizedStrings.RUS}/>
         </>
     );
 }

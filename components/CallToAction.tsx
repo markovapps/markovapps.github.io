@@ -8,14 +8,18 @@ type CallToActionProps = {
             ios: string;
         };
     };
+    localizedStrings: {
+        downloadAndInstall: string;
+        rightNow: string;
+    }
 };
 
-const CallToAction: React.FC<CallToActionProps> = ({data}) => {
+const CallToAction: React.FC<CallToActionProps> = ({data, localizedStrings}) => {
     return (
         <section id="cta" className="relative bg-cover bg-center bg-no-repeat py-16 text-center">
             <div className="container mx-auto">
                 <div className="mb-8">
-                    <h2 className="text-3xl font-bold">Скачай и установи {data.name} прямо сейчас</h2>
+                    <h2 className="text-3xl font-bold">{localizedStrings.downloadAndInstall} {data.name} {localizedStrings.rightNow}</h2>
                 </div>
 
                 <div className="flex justify-center gap-4 mb-8">
@@ -26,6 +30,7 @@ const CallToAction: React.FC<CallToActionProps> = ({data}) => {
                             className="h-12 w-auto"
                         />
                     </a>
+                    {data.links.google &&
                     <a href={data.links.google} className="inline-block">
                         <img
                             src="/playstore.png"
@@ -33,6 +38,7 @@ const CallToAction: React.FC<CallToActionProps> = ({data}) => {
                             className="h-12 w-auto"
                         />
                     </a>
+                    }
                 </div>
             </div>
         </section>

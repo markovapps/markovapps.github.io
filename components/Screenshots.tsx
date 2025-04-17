@@ -9,16 +9,19 @@ type ScreenshotsProps = {
             img: string;
             title: string;
         }[];
+    };
+    localizedStrings: {
+        mainScreens: string;
     }
 };
 
-const Screenshots: React.FC<ScreenshotsProps> = ({data}) => {
+const Screenshots: React.FC<ScreenshotsProps> = ({data, localizedStrings}) => {
 
     return (
         <section id="screenshots" className="relative py-16">
             <div className="container mx-auto text-center">
                 <div className="mb-8">
-                    <h2 className="text-3xl font-semibold">Основные экраны приложения</h2>
+                    <h2 className="text-3xl font-semibold">{localizedStrings.mainScreens}</h2>
                     <p className={subtitle({class: "mt-4"})}>{data.screenshotsTitle}</p>
                 </div>
 

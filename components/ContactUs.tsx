@@ -2,7 +2,16 @@ import React from 'react';
 
 import {ContactDevs} from "./buttons";
 
-const ContactUs: React.FC = () => {
+type ContactUsProps = {
+    localizedStrings: {
+        contactUsForHelp: string;
+        weWillHelp: string;
+        thanksForChoosingUs: string;
+        contactDevelopers: string;
+    }
+};
+
+const ContactUs: React.FC<ContactUsProps> = ({localizedStrings}) => {
     return (
         <section className="relative bg-cover bg-center bg-no-repeat py-16 text-center">
             <div
@@ -12,15 +21,15 @@ const ContactUs: React.FC = () => {
                 }}
             >
                 <div style={{marginTop: 16}}>
-                    Свяжитесь с нами, если у Вас есть вопросы, предложения, хотите оставить отзыв, отчет об ошибке и т.д.
+                    {localizedStrings.contactUsForHelp}
                 </div>
                 <div style={{marginTop: 16}}>
-                    Мы постараемся помочь Вам в кратчайшие сроки!
+                    {localizedStrings.weWillHelp}
                 </div>
                 <div style={{marginTop: 16}}>
-                    Спасибо, что пользуетесь нашим приложением и помогаете его развивать.
+                    {localizedStrings.thanksForChoosingUs}
                 </div>
-                <ContactDevs style={{marginTop: 24}}/>
+                <ContactDevs style={{marginTop: 24}} text={localizedStrings.contactDevelopers}/>
             </div>
         </section>
     );

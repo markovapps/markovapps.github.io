@@ -6,8 +6,9 @@ import { siteConfig } from "@/config/site";
 
 interface Props {
   style?: CSSProperties;
+  text?: string;
 }
-export const ContactDevs: React.FC<Props> = ({ style }) => (
+export const ContactDevs: React.FC<Props> = ({ style, text }) => (
   <Button
     as={Link}
     className="text-sm font-normal text-default-600 bg-default-100"
@@ -15,6 +16,6 @@ export const ContactDevs: React.FC<Props> = ({ style }) => (
     style={style}
     variant="solid"
   >
-    Связаться с разработчиками
+    {text}
   </Button>
 );

@@ -22,7 +22,7 @@ export const Footer = ({data}: FooterProps) => {
             <div className="text-[#999999] text-center font-raleway text-sm font-normal">
                 {isTimeSheet && <p>Идейный вдохновитель: Александр Половцов</p>}
 
-                <p>&copy; 2024 {data.name}, created by Kanstantsin Markau & Hanna Markava</p>
+                <p>&copy; 2024 - 2025 {data.name}, created by Kanstantsin Markau & Hanna Markava</p>
             </div>
         </footer>
     );

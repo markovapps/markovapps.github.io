@@ -6,6 +6,7 @@ import Benefits from "@/components/Benefits";
 import Screenshots from "@/components/Screenshots";
 import CallToAction from "@/components/CallToAction";
 import {welpeny} from "@/config/welpeny";
+import {localizedStrings} from "@/config/localizedStrings";
 import ContactUs from "@/components/ContactUs";
 
 export default function WelpenyPage() {
@@ -13,13 +14,13 @@ export default function WelpenyPage() {
         <>
             <Slider data={welpeny}/>
             <Divider orientation="horizontal"/>
-            <Benefits data={welpeny}/>
+            <Benefits data={welpeny} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <Screenshots data={welpeny}/>
+            <Screenshots data={welpeny} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <CallToAction data={welpeny}/>
+            <CallToAction data={welpeny} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <ContactUs/>
+            <ContactUs localizedStrings={localizedStrings.RUS}/>
         </>
     );
 }
