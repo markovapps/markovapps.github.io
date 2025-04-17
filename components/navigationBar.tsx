@@ -95,7 +95,10 @@ export const NavigationBar = ({data, localizedStrings}: NavProps) => {
                     <ThemeSwitch aria-label="Toggle Theme"/>
                 </NavbarItem>
                 <NavbarItem className="hidden md:flex">
-                    <ContactDevs aria-label="Contact Developers" text={localizedStrings.contactDevelopers}/>
+                    <ContactDevs
+                        aria-label="Contact Developers"
+                        link={data.links.contactUs}
+                        text={localizedStrings.contactDevelopers}/>
                 </NavbarItem>
             </NavbarContent>
 

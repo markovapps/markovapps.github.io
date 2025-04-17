@@ -20,7 +20,7 @@ export default function WelpenyPage() {
             <Divider orientation="horizontal"/>
             <CallToAction data={welpeny} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <ContactUs localizedStrings={localizedStrings.RUS}/>
+            <ContactUs data={welpeny} localizedStrings={localizedStrings.RUS}/>
         </>
     );
 }

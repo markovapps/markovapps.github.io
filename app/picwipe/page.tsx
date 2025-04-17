@@ -20,7 +20,7 @@ export default function PicWipePage() {
             <Divider orientation="horizontal"/>
             <CallToAction data={picWipe} localizedStrings={localizedStrings.ENG}/>
             <Divider orientation="horizontal"/>
-            <ContactUs localizedStrings={localizedStrings.ENG}/>
+            <ContactUs data={picWipe} localizedStrings={localizedStrings.ENG}/>
         </>
     );
 }

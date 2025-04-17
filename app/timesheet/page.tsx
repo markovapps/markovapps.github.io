@@ -20,7 +20,7 @@ export default function TimeSheetPage() {
             <Divider orientation="horizontal"/>
             <CallToAction data={timeSheet} localizedStrings={localizedStrings.RUS}/>
             <Divider orientation="horizontal"/>
-            <ContactUs localizedStrings={localizedStrings.RUS}/>
+            <ContactUs data={timeSheet} localizedStrings={localizedStrings.RUS}/>
         </>
     );
 }
