@@ -25,9 +25,9 @@ export default function PicWipeFAQPage() {
                 <strong>What happens when I delete a photo from the trash?</strong>
                 <p>
                      They are deleted from your iOS Photo Library.
-                     However, Apple keeps deleted photos in the "Recently Deleted" album for 30 days,
+                     However, Apple keeps deleted photos in the &quot;Recently Deleted&quot; album for 30 days,
                      giving you time to recover them if needed.
-                      Open iOS Photos app and go to "Recently Deleted" album to recover them.
+                      Open iOS Photos app and go to &quot;Recently Deleted&quot; album to recover them.
                 </p>
                 <br/>
 
