@@ -76,6 +76,7 @@ export const welpeny = {
         ios: "https://apps.apple.com/us/app/welpeny-finance-tracker/id6692627362",
         contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLSd6gJTIKvnUloDoGS9DiCnu5-ISSbyZBFymcrwmm5g-stWMWw/viewform?usp=sharing',
         privacyPolicy: "/welpeny/privacypolicy",
-        terms: "/welpeny/terms"
+        terms: "/welpeny/terms",
+        faq: ""
     }
 };

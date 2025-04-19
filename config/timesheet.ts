@@ -72,6 +72,7 @@ export const timeSheet = {
         ios: "https://apps.apple.com/us/app/timesheet-paycheck-calculator/id6503091221",
         contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLSd6gJTIKvnUloDoGS9DiCnu5-ISSbyZBFymcrwmm5g-stWMWw/viewform?usp=sharing',
         privacyPolicy: "/timesheet/privacypolicy",
-        terms: "/timesheet/terms"
+        terms: "/timesheet/terms",
+        faq: ""
     }
 };
