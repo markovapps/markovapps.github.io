@@ -45,14 +45,14 @@ export default function PicWipeFAQPage() {
                     <li>Open your device’s <strong>Settings</strong>.</li>
                     <li>Tap your name at the top.</li>
                     <li>Select <strong>Subscriptions</strong>.</li>
-                    <li>Choose the subscription you'd like to manage.</li>
+                    <li>Choose the subscription you&apos;d like to manage.</li>
                     <li>Tap <strong>Cancel Subscription</strong> and confirm.</li>
                 </ul>
                 <br/>
 
                 <strong>How can I contact someone at PicWipe?</strong>
                 <p>
-                    We're happy to help!
+                    We&apos;re happy to help!
                     Reach out to us anytime at <a
                     href="mailto:thoughtsafe.bonnstsmark@gmail.com"
                     className="text-blue-600">
