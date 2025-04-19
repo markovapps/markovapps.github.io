@@ -30,12 +30,14 @@ type NavProps = {
             privacyPolicy: string;
             terms: string;
             contactUs: string;
+            faq: string;
         }
     };
     localizedStrings: {
         privacyPolicy: string;
         terms: string;
         contactDevelopers: string;
+        faq: string;
     }
 };
 
@@ -87,6 +89,23 @@ export const NavigationBar = ({data, localizedStrings}: NavProps) => {
                         </NextLink>
                     </NavbarItem>
                 </ul>
+                {data.links.faq &&
+                <ul className="hidden md:flex ml-2 bg-transparent p-0">
+                    <NavbarItem key={data.links.faq}>
+                        <NextLink
+                            href={data.links.faq}
+                            className={clsx(
+                                linkStyles({color: "foreground"}),
+                                "data-[active=true]:text-primary data-[active=true]:font-medium",
+                            )}
+                            color="foreground"
+                            data-active={pathName === data.links.faq ? "true" : "false"}
+                        >
+                            {localizedStrings.faq}
+                        </NextLink>
+                    </NavbarItem>
+                </ul>
+                }
             </NavbarContent>
 
             {/* Right Section: Theme and Contact */}
@@ -129,6 +148,17 @@ export const NavigationBar = ({data, localizedStrings}: NavProps) => {
                             {localizedStrings.terms}
                         </Link>
                     </NavbarMenuItem>
+                    {data.links.faq &&
+                    <NavbarMenuItem key={data.links.faq}>
+                        <Link
+                            href={data.links.faq}
+                            className={clsx("text-lg", "text-primary")}
+                            aria-label={`Navigate to ${data.name}`}
+                        >
+                            {localizedStrings.faq}
+                        </Link>
+                    </NavbarMenuItem>
+                    }
                     <NavbarMenuItem key={data.links.contactUs}>
                         <Link
                             href={data.links.contactUs}

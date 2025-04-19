@@ -10,6 +10,7 @@ export const localizedStrings = {
         contactUsForHelp: "Свяжитесь с нами, если у Вас есть вопросы, предложения, хотите оставить отзыв, отчет об ошибке и т.д.",
         weWillHelp: "Мы постараемся помочь Вам в кратчайшие сроки!",
         thanksForChoosingUs: "Спасибо, что пользуетесь нашим приложением и помогаете его развивать.",
+        faq: "FAQ",
     },
     ENG: {
         privacyPolicy: "Privacy Policy",
@@ -22,5 +23,6 @@ export const localizedStrings = {
         contactUsForHelp: "Contact us if you have any questions, suggestions, would like to leave feedback, report a bug, etc.",
         weWillHelp: "We’ll do our best to assist you as soon as possible!",
         thanksForChoosingUs: "Thank you for using our app and helping us make it better.",
+        faq: "FAQ",
     }
 };
