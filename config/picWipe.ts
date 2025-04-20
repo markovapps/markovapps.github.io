@@ -41,28 +41,28 @@ export const picWipe = {
     ],
     screenshots: [
         {
-            img: "/picwipe/screenshots/01.png",
-            title: "Статистика, круговая диаграмма",
+            img: "/picwipe/screenshots/1.png",
+            title: "Главный экран по месяцам",
         },
         {
-            img: "/picwipe/screenshots/02.png",
-            title: "Список всех транзакций",
+            img: "/picwipe/screenshots/2.png",
+            title: "Свайп вверх для удаления",
         },
         {
-            img: "/picwipe/screenshots/03.png",
-            title: "Создание категории",
+            img: "/picwipe/screenshots/3.png",
+            title: "Свайп вниз для сохранения",
         },
         {
-            img: "/picwipe/screenshots/04.png",
-            title: "Создание транзакции",
+            img: "/picwipe/screenshots/4.png",
+            title: "Группировка по коллекциям",
         },
         {
-            img: "/picwipe/screenshots/05.png",
-            title: "Сравнение по месяцам",
+            img: "/picwipe/screenshots/5.png",
+            title: "Добавление в альбом",
         },
         {
-            img: "/picwipe/screenshots/06.png",
-            title: "Темная тема",
+            img: "/picwipe/screenshots/6.png",
+            title: "Статистика освобожденного места",
         },
     ],
     reviews: [
