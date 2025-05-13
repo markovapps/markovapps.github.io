@@ -15,7 +15,7 @@ export default function PicWipePrivacyPolicyPage() {
                 <br/>
 
                 <strong>Privacy Policy</strong>
-                <p className="text-stone-400">Last Update: 2025-04-15</p>
+                <p className="text-stone-400">Last Update: 2025-05-13</p>
                 <br/>
                 <p>
                     This privacy policy is applicable to the Swipe Photo Cleaner: PicWipe app
@@ -88,6 +88,16 @@ export default function PicWipePrivacyPolicyPage() {
                                 target="_blank"
                             >
                                 RevenueCat
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="text-blue-600"
+                                href="https://firebase.google.com/support/privacy"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Google Analytics for Firebase
                             </a>
                         </li>
                     </ul>
