@@ -35,9 +35,11 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                             <div className={subtitle({class: "mt-4"})}>{data.subtitle}</div>
 
                             <div className=" mt-6 flex">
+                                {data.links.ios &&
                                 <a className="btn-hover" href={data.links.ios}>
                                     <img src="/appstore.png" alt="download appstore"/>
                                 </a>
+                                }
                                 {data.links.google &&
                                 <a className="btn-hover ml-4" href={data.links.google}>
                                     <img src="/playstore.png" alt="download playstore"/>

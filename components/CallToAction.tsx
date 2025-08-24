@@ -23,6 +23,7 @@ const CallToAction: React.FC<CallToActionProps> = ({data, localizedStrings}) => 
                 </div>
 
                 <div className="flex justify-center gap-4 mb-8">
+                    {data.links.ios &&
                     <a href={data.links.ios} className="inline-block">
                         <img
                             src="/appstore.png"
@@ -30,6 +31,7 @@ const CallToAction: React.FC<CallToActionProps> = ({data, localizedStrings}) => 
                             className="h-12 w-auto"
                         />
                     </a>
+                    }
                     {data.links.google &&
                     <a href={data.links.google} className="inline-block">
                         <img
