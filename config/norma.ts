@@ -74,7 +74,7 @@ export const norma = {
     links: {
         google: "",
         ios: "",
-        contactUs: '',
+        contactUs: 'https://forms.gle/pQrwYwt7VHvHMCo46',
         privacyPolicy: "/norma/privacypolicy",
         terms: "/norma/terms",
         faq: ""
