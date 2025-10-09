@@ -151,6 +151,16 @@ export default function TimeSheetPrivacyPolicyPage() {
                                 RevenueCat
                             </a>
                         </li>
+                        <li>
+                            <a
+                                className="text-blue-600"
+                                href="https://sentry.io/privacy"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Sentry
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <p>
