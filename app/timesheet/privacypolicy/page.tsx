@@ -15,7 +15,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <br/>
 
                 <strong>Privacy Policy</strong>
-                <p className="text-stone-400">Last Update: 2025-01-20</p>
+                <p className="text-stone-400">Last Update: 2025-10-09</p>
                 <br/>
                 <p>
                     This privacy policy is applicable to the Timesheet: Paycheck calculator app
