@@ -15,7 +15,7 @@ export default function NormaPrivacyPolicyPage() {
                 <br/>
 
                 <strong>Privacy Policy</strong>
-                <p className="text-stone-400">Last Update: 2025-08-24</p>
+                <p className="text-stone-400">Last Update: 2025-10-30</p>
                 <br/>
                 <p>
                     This privacy policy is applicable to the Piece Salary Calculator: Norma app
@@ -72,7 +72,7 @@ export default function NormaPrivacyPolicyPage() {
                     their service. The Service Provider may share your information with
                     third parties in the ways that are described in this privacy statement.
                 </p>
-              {/*  <div>
+                <div>
                     <br/>
                     <p>
                         Please note that the Application utilizes third-party services that
@@ -84,25 +84,15 @@ export default function NormaPrivacyPolicyPage() {
                         <li>
                             <a
                                 className="text-blue-600"
-                                href="https://www.revenuecat.com/privacy"
+                                href="https://expo.io/privacy"
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                RevenueCat
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://firebase.google.com/support/privacy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Google Analytics for Firebase
+                                Expo
                             </a>
                         </li>
                     </ul>
-                </div> */}
+                </div>
                 <p>
                     The Service Provider may disclose User Provided and Automatically
                     Collected Information:

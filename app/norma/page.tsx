@@ -14,10 +14,10 @@ export default function NormaPage() {
         <>
             <Slider data={norma}/>
             <Divider orientation="horizontal"/>
-          {/*  <Benefits data={norma} localizedStrings={localizedStrings.ENG}/>
+            <Benefits data={norma} localizedStrings={localizedStrings.ENG}/>
             <Divider orientation="horizontal"/>
             <Screenshots data={norma} localizedStrings={localizedStrings.ENG}/>
-            <Divider orientation="horizontal"/> */}
+            <Divider orientation="horizontal"/>
             <CallToAction data={norma} localizedStrings={localizedStrings.ENG}/>
             <Divider orientation="horizontal"/>
             <ContactUs data={norma} localizedStrings={localizedStrings.ENG}/>
