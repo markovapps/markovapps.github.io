@@ -15,10 +15,10 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <br/>
 
                 <strong>Privacy Policy</strong>
-                <p className="text-stone-400">Last Update: 2025-10-09</p>
+                <p className="text-stone-400">Last Update: 2025-11-30</p>
                 <br/>
                 <p>
-                    This privacy policy is applicable to the Timesheet: Paycheck calculator app
+                    This privacy policy is applicable to the Work hours tracker - Timesheet app
                     (hereby referred to as &quot;Application&quot;) for mobile devices
                     that was created by Kanstantsin Markau &amp; Hanna Markava
                     (hereby referred to as &quot;Service Provider&quot;) as an Ad
@@ -161,13 +161,23 @@ export default function TimeSheetPrivacyPolicyPage() {
                                 Sentry
                             </a>
                         </li>
+                        <li>
+                            <a
+                                className="text-blue-600"
+                                href="https://www.apple.com/legal/internet-services/icloud/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                iCloud
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <p>
                     The Service Provider may disclose User Provided and Automatically
                     Collected Information:
                 </p>
-                <ul>
+                <ul className="list-disc list-inside indent-2">
                     <li>
                         as required by law, such as to comply with a subpoena, or similar
                         legal process;
@@ -185,6 +195,70 @@ export default function TimeSheetPrivacyPolicyPage() {
                     </li>
                 </ul>
                 <p/>
+                <br/>
+                <strong>Use of iCloud Sync and Device Synchronization</strong>
+                <p>
+                    Certain features of the App (including automatic iCloud sync and synchronization
+                    across multiple devices) rely on Apple’s iCloud service. When you enable these features,
+                    your App data is stored in your personal iCloud account.
+                </p>
+                <br/>
+                <i>iCloud Storage Requirements</i>
+                <p>To use iCloud sync, you must have:</p>
+                <ul className="list-disc list-inside indent-2">
+                    <li>
+                        A valid Apple ID,
+                    </li>
+                    <li>
+                        iCloud enabled on your device,
+                    </li>
+                    <li>
+                        Sufficient available storage in your iCloud account.
+                    </li>
+                </ul>
+                <p>
+                    If your iCloud storage is full, data may not sync or update properly.
+                </p>
+                <br/>
+                <i>Internet Connection</i>
+                <p>
+                    iCloud sync requires an active internet connection (Wi-Fi or mobile data).
+                    If your device is offline, changes will be synced once a connection is restored.
+                </p>
+                <br/>
+                <i>How Data Is Stored and Processed</i>
+                <ul className="list-disc list-inside indent-2">
+                    <li>
+                        Your data is stored only in your iCloud account and on your devices.
+                    </li>
+                    <li>
+                         We do not have access to your iCloud data and cannot read, modify, or delete it.
+                    </li>
+                    <li>
+                        Apple processes and stores your iCloud data in accordance with its own Privacy Policy
+                        and security practices.
+                    </li>
+                </ul>
+                <br/>
+                <i>Synchronization Between Devices</i>
+                <p>If you use multiple iOS devices logged in to the same Apple ID:</p>
+                <ul className="list-disc list-inside indent-2">
+                    <li>
+                        Your data may be automatically synced between these devices through iCloud.
+                    </li>
+                    <li>
+                        The functionality depends on iCloud availability, device settings, and network conditions.
+                    </li>
+                </ul>
+                <br/>
+                <i>User Control</i>
+                <p>
+                    You can enable or disable iCloud sync at any time in your device’s iCloud settings.
+                </p>
+                <p>
+                    Disabling iCloud sync will stop new data from being uploaded to iCloud, but previously
+                    synced data may remain in your iCloud account until you remove it manually through iCloud settings.
+                </p>
                 <br/>
                 <strong>Opt-Out Rights</strong>
                 <p>
