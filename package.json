@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "npx next dev --turbo",
-		"build": "npx next build && npx copyfiles --all --flat 'additional/*' out/",
+		"build": "npx next build && npx copyfiles --all --flat \"additional/*\" out/",
 		"start": "npx next start",
 		"lint": "npx eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
 		"predeploy": "node validate-files.js",
