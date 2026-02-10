@@ -11,7 +11,7 @@
 		"deploy": "npx gh-pages -d out",
 		"app-ads-update": "jbang app_ads_txt --update",
 		"app-ads-commit": "git add additional/app-ads.txt && git commit -m \"Update app-ads.txt from CAS.ai reference\"",
-		"app-ads-refresh": "before=$(shasum additional/app-ads.txt | awk '{print $1}') && npm run app-ads-update && after=$(shasum additional/app-ads.txt | awk '{print $1}') && if [ \"$before\" != \"$after\" ]; then npm run app-ads-commit && npm run build && npm run deploy; else echo \"app-ads.txt is up to date. Skipping commit/build/deploy.\"; fi"
+		"app-ads-refresh": "npm run app-ads-update && if ! git diff --quiet -- additional/app-ads.txt; then npm run app-ads-commit && npm run build && npm run deploy; else echo \"app-ads.txt is up to date. Skipping commit/build/deploy.\"; fi"
 	},
 	"dependencies": {
 		"@nextui-org/button": "2.2.9",
