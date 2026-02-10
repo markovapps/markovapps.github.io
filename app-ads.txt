@@ -2522,7 +2522,7 @@ zmaticoo.com,5135302,RESELLER
 zmaticoo.com,5135535,RESELLER
 zoomd.com,88478941,RESELLER
 
-
+### CAS.ai
 # CAS.ai Updated Feb 04, 2026
 OwnerDomain=cas.ai
 cas.ai, 922e6092, DIRECT
