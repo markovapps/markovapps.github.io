@@ -16,6 +16,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 In github repo setting enable Source: Deploy from brunch "gh-pages"
 
 ```bash
+# build & deploy
+npm run release # build & deploy
+
 # generate output folder
 npm run build
 
