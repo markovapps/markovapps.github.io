@@ -8,7 +8,7 @@
 		"start": "npx next start",
 		"lint": "npx eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
 		"predeploy": "node validate-files.js",
-		"deploy": "npx gh-pages -d out",
+		"deploy": "npx gh-pages -d out --dotfiles",
 		"release": "npm run build && npm run deploy",
 		"app-ads-update": "jbang app_ads_txt --update",
 		"app-ads-commit": "git add additional/app-ads.txt && git commit -m \"Update app-ads.txt from CAS.ai reference\"",
