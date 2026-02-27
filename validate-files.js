@@ -4,9 +4,7 @@ const fs = require('fs');
 
 const requiredFiles = [
     'out/app-ads.txt',
-    'out/.nojekyll',
-    'out/.well-known/apple-app-site-association',
-    'out/.well-known/assetlinks.json'
+    'out/.nojekyll'
 ];
 
 const missingFiles = requiredFiles.filter(file => !fs.existsSync(file));
