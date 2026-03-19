@@ -7,6 +7,11 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Upade app-adds.txt
+```shell
+npm run app-ads-update-and-deploy
+```
+
 
 
 ## 📝 Deploy to GitHub Pages
