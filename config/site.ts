@@ -15,6 +15,11 @@ export const siteConfig = {
       href: "/timesheet",
       icon: "/timesheet/logo.png",
     },
+    {
+      label: "Couply",
+      href: "/couply",
+      icon: "/couply/logo.png",
+    },
   ],
   navMenuItems: [
     {
@@ -27,6 +32,11 @@ export const siteConfig = {
       href: "/timesheet",
       icon: "/timesheet.png",
     },
+    {
+      label: "Couply",
+      href: "/couply",
+      icon: "/couply/logo.png",
+    },
   ],
   privacyPolicyNavItems: [
     {
@@ -38,6 +48,11 @@ export const siteConfig = {
       label: "TimeSheet",
       href: "/timesheet/privacypolicy",
       icon: "/timesheet.png",
+    },
+    {
+      label: "Couply",
+      href: "/couply/privacypolicy",
+      icon: "/couply/logo.png",
     },
   ],
   links: {
