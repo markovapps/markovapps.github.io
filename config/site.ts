@@ -16,9 +16,9 @@ export const siteConfig = {
       icon: "/timesheet/logo.png",
     },
     {
-      label: "Couply",
-      href: "/couply",
-      icon: "/couply/logo.png",
+      label: "DuoPoints",
+      href: "/duopoints",
+      icon: "/duopoints/logo.png",
     },
   ],
   navMenuItems: [
@@ -33,9 +33,9 @@ export const siteConfig = {
       icon: "/timesheet.png",
     },
     {
-      label: "Couply",
-      href: "/couply",
-      icon: "/couply/logo.png",
+      label: "DuoPoints",
+      href: "/duopoints",
+      icon: "/duopoints/logo.png",
     },
   ],
   privacyPolicyNavItems: [
@@ -50,9 +50,9 @@ export const siteConfig = {
       icon: "/timesheet.png",
     },
     {
-      label: "Couply",
-      href: "/couply/privacypolicy",
-      icon: "/couply/logo.png",
+      label: "DuoPoints",
+      href: "/duopoints/privacypolicy",
+      icon: "/duopoints/logo.png",
     },
   ],
   links: {

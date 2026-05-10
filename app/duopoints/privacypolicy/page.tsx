@@ -2,13 +2,13 @@ import React from "react";
 
 import {title} from "@/components/primitives";
 
-export default function CouplyPrivacyPolicyPage() {
+export default function DuoPointsPrivacyPolicyPage() {
     return (
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center">
             <div>
                 <div className={title({size: "sm"})}>
-                    Couply: Privacy Policy
+                    DuoPoints: Privacy Policy
                 </div>
                 <br/>
                 <br/>
@@ -18,7 +18,7 @@ export default function CouplyPrivacyPolicyPage() {
                 <p className="text-stone-400">Last Update: 2026-04-26</p>
                 <br/>
                 <p>
-                    This privacy policy is applicable to the Couply app
+                    This privacy policy is applicable to the DuoPoints app
                     (hereby referred to as &quot;Application&quot;) for mobile devices
                     that was created by Kanstantsin Markau &amp; Hanna Markava
                     (hereby referred to as &quot;Service Provider&quot;) as a Commercial service. This service is intended for use &quot;AS IS&quot;.

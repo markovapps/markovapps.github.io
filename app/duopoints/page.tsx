@@ -5,30 +5,30 @@ import Slider from "@/components/Slider";
 import Benefits from "@/components/Benefits";
 import Screenshots from "@/components/Screenshots";
 import CallToAction from "@/components/CallToAction";
-import {couply} from "@/config/couply";
+import {duopoints} from "@/config/duopoints";
 import {localizedStrings} from "@/config/localizedStrings";
 import ContactUs from "@/components/ContactUs";
 
-export default function CouplyPage() {
+export default function DuoPointsPage() {
     return (
         <>
-            <Slider data={couply}/>
+            <Slider data={duopoints}/>
             <Divider orientation="horizontal"/>
-            {couply.benefits.length > 0 && (
+            {duopoints.benefits.length > 0 && (
                 <>
-                    <Benefits data={couply} localizedStrings={localizedStrings.ENG}/>
+                    <Benefits data={duopoints} localizedStrings={localizedStrings.ENG}/>
                     <Divider orientation="horizontal"/>
                 </>
             )}
-            {couply.screenshots.length > 0 && (
+            {duopoints.screenshots.length > 0 && (
                 <>
-                    <Screenshots data={couply} localizedStrings={localizedStrings.ENG}/>
+                    <Screenshots data={duopoints} localizedStrings={localizedStrings.ENG}/>
                     <Divider orientation="horizontal"/>
                 </>
             )}
-            <CallToAction data={couply} localizedStrings={localizedStrings.ENG}/>
+            <CallToAction data={duopoints} localizedStrings={localizedStrings.ENG}/>
             <Divider orientation="horizontal"/>
-            <ContactUs data={couply} localizedStrings={localizedStrings.ENG}/>
+            <ContactUs data={duopoints} localizedStrings={localizedStrings.ENG}/>
         </>
     );
 }
