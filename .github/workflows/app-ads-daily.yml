@@ -1,0 +1,67 @@
+name: Update app-ads.txt daily
+
+on:
+  # Once a day at 03:00 UTC
+  schedule:
+    - cron: "0 3 * * *"
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+# Needed to push the app-ads.txt commit to master and to the gh-pages branch
+permissions:
+  contents: write
+
+# Don't overlap with another run of this workflow
+concurrency:
+  group: app-ads-daily
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update app-ads.txt from CAS.ai reference
+        run: node scripts/update-app-ads.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- public/app-ads.txt; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "app-ads.txt is up to date. Skipping commit/build/deploy."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push app-ads.txt
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/app-ads.txt
+          git commit -m "Update app-ads.txt from CAS.ai reference"
+          git push
+
+      - name: Build
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run deploy
+        env:
+          # gh-pages pushes to origin using this token
+          GIT_USER: "github-actions[bot]"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
