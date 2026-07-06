@@ -7,9 +7,6 @@ name: Update app-ads.txt daily
 # Without these secrets the workflow still updates app-ads.txt; only the status report is skipped.
 
 on:
-  # Runs daily at 03:00 UTC — ~2h before the DailyDigest Lambda (05:00 UTC), so its
-  # status is fresh when the digest reads it. GitHub may delay scheduled runs under
-  # load; the digest tolerates this by showing the last recorded run + a staleness flag.
   schedule:
     - cron: "0 3 * * *"
   # Allow manual runs from the Actions tab
@@ -37,17 +34,24 @@ jobs:
           node-version: "22"
 
       - name: Update app-ads.txt from CAS.ai reference
-        # Self-contained script (only Node built-ins), no npm install needed here
+        id: update
+        # Self-contained script (only Node built-ins), no npm install needed here.
+        # Compares the reference against the LIVE deployed file and emits
+        # `deploy_needed` (true/false) — the single build/deploy signal every
+        # step below gates on.
         run: node scripts/update-app-ads.mjs
 
-      - name: Check for changes
-        id: diff
+      - name: Guard against unexpected changes
+        # The script must only ever modify public/app-ads.txt. `npm run build`
+        # later bundles the WHOLE working tree into out/ and deploys it, but we
+        # only commit public/app-ads.txt — so any stray change would ship to the
+        # live site with no trace in master history. Fail loudly before that.
         run: |
-          if git diff --quiet -- public/app-ads.txt; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "app-ads.txt is up to date. Skipping commit/build/deploy."
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+          UNEXPECTED=$(git status --porcelain -- . ':(exclude)public/app-ads.txt')
+          if [ -n "$UNEXPECTED" ]; then
+            echo "::error::Working tree changed outside public/app-ads.txt:"
+            echo "$UNEXPECTED"
+            exit 1
           fi
 
       # Cache node_modules keyed on package.json. No committed lockfile (see
@@ -55,33 +59,40 @@ jobs:
       # always ubuntu-latest, so caching platform-specific binaries is safe here.
       - name: Cache node_modules
         id: npm-cache
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.update.outputs.deploy_needed == 'true'
         uses: actions/cache@v4
         with:
           path: node_modules
           key: node-modules-${{ runner.os }}-node22-${{ hashFiles('package.json') }}
 
       - name: Install dependencies
-        # Only needed for build/deploy, which run only when there are changes.
+        # Only needed for build/deploy, which run only when a deploy is needed.
         # Skipped entirely on a cache hit (package.json unchanged).
-        if: steps.diff.outputs.changed == 'true' && steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps.update.outputs.deploy_needed == 'true' && steps.npm-cache.outputs.cache-hit != 'true'
         run: npm install
 
       - name: Commit and push app-ads.txt
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.update.outputs.deploy_needed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/app-ads.txt
-          git commit -m "Update app-ads.txt from CAS.ai reference"
-          git push
+          # deploy_needed can be true with nothing to commit: the repo file already
+          # matched the reference but the live site was stale. Only commit a real
+          # change; either way the later steps rebuild + redeploy the live site.
+          if git diff --cached --quiet; then
+            echo "No repo file change to commit; redeploying the existing file."
+          else
+            git commit -m "Update app-ads.txt from CAS.ai reference"
+            git push
+          fi
 
       - name: Build
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.update.outputs.deploy_needed == 'true'
         run: npm run build
 
       - name: Deploy to gh-pages
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.update.outputs.deploy_needed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -95,25 +106,25 @@ jobs:
           git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
           npm run deploy
 
-      # Report the outcome to the GitStatus Lambda, which records it in DynamoDB for
-      # the DailyDigest to surface. Runs on EVERY successful run: "updated" when the
-      # file changed, "up_to_date" otherwise. This heartbeat lets the digest detect a
-      # stalled workflow. The token gates the public Function URL (see GitStatus.mjs).
-      - name: Report status to Lambda
+      # Report the outcome to the status endpoint, which records it for the daily
+      # status report to surface. Runs on EVERY successful run: "updated" when we
+      # (re)deployed, "up_to_date" otherwise. This heartbeat lets the report detect
+      # a stalled workflow. The token authenticates the request to the endpoint.
+      - name: Report status
         if: success()
         env:
           GIT_STATUS_URL: ${{ secrets.GIT_STATUS_URL }}
           GIT_STATUS_TOKEN: ${{ secrets.GIT_STATUS_TOKEN }}
-          CHANGED: ${{ steps.diff.outputs.changed }}
+          DEPLOY_NEEDED: ${{ steps.update.outputs.deploy_needed }}
         run: |
-          if [ "$CHANGED" = "true" ]; then STATUS="updated"; else STATUS="up_to_date"; fi
+          if [ "$DEPLOY_NEEDED" = "true" ]; then STATUS="updated"; else STATUS="up_to_date"; fi
           curl -sS -X POST "$GIT_STATUS_URL" \
             -H "Content-Type: application/json" \
             -H "X-Auth-Token: $GIT_STATUS_TOKEN" \
             -d "{\"status\":\"$STATUS\",\"datetime\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"runUrl\":\"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}"
 
-      # Runs only if an earlier step failed, so the digest can show "last run failed".
-      - name: Report failure to Lambda
+      # Runs only if an earlier step failed, so the status report can show "last run failed".
+      - name: Report failure
         if: failure()
         env:
           GIT_STATUS_URL: ${{ secrets.GIT_STATUS_URL }}
