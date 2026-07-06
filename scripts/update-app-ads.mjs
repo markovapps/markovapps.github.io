@@ -1,6 +1,6 @@
 // Self-contained port of the jbang `app_ads_txt --update` script.
-// Fetches the CAS.ai reference app-ads.txt and, if it contains records
-// missing from our local file, replaces everything after the `### CAS.ai`
+// Fetches the CAS.ai reference app-ads.txt and, if its record set differs from
+// ours (records added OR removed), replaces everything after the `### CAS.ai`
 // marker with the fetched data. No changes are written when up to date.
 
 import { readFile, writeFile } from "node:fs/promises";
@@ -48,14 +48,22 @@ async function main() {
   const fetchedRecords = extractRecords(fetchedData);
   const currentRecords = extractRecords(currentTail);
 
-  const missing = [...fetchedRecords].filter((r) => !currentRecords.has(r));
+  // Symmetric comparison: react to both added and removed records. The tail is
+  // rewritten wholesale from the reference, so anything CAS.ai dropped must be
+  // dropped here too — otherwise we'd keep publicly authorizing sellers the
+  // reference no longer recognizes. Comments/blank lines/order/dupes are ignored
+  // by extractRecords, so formatting-only differences don't cause churn.
+  const added = [...fetchedRecords].filter((r) => !currentRecords.has(r));
+  const removed = [...currentRecords].filter((r) => !fetchedRecords.has(r));
 
-  if (missing.length === 0) {
+  if (added.length === 0 && removed.length === 0) {
     console.log("app-ads.txt is up to date.");
     return;
   }
 
-  console.log(`[warn] Missing records found: ${missing.length}`);
+  console.log(
+    `[warn] Record changes found: ${added.length} added, ${removed.length} removed`
+  );
   console.log(`[info] Replacing everything after marker: ${MARKER}`);
 
   const prefix = lines.slice(0, markerLineIndex + 1).join("\n");
