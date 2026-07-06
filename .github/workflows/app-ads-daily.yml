@@ -1,9 +1,9 @@
 name: Update app-ads.txt daily
 
 on:
-  # Once a day at 03:00 UTC
-  schedule:
-    - cron: "0 3 * * *"
+  # Disabled: daily schedule turned off. Manual runs only.
+  # schedule:
+  #   - cron: "0 3 * * *"
   # Allow manual runs from the Actions tab
   workflow_dispatch:
 
