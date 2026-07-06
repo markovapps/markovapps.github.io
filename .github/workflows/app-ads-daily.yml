@@ -1,9 +1,17 @@
 name: Update app-ads.txt daily
 
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   GIT_STATUS_URL   — endpoint the workflow POSTs its outcome to, so the daily status
+#                      report can show when app-ads.txt last ran and whether it changed.
+#   GIT_STATUS_TOKEN — shared token sent with the request to authenticate it.
+# Without these secrets the workflow still updates app-ads.txt; only the status report is skipped.
+
 on:
-  # Disabled: daily schedule turned off. Manual runs only.
-  # schedule:
-  #   - cron: "0 3 * * *"
+  # Runs daily at 03:00 UTC — ~2h before the DailyDigest Lambda (05:00 UTC), so its
+  # status is fresh when the digest reads it. GitHub may delay scheduled runs under
+  # load; the digest tolerates this by showing the last recorded run + a staleness flag.
+  schedule:
+    - cron: "0 3 * * *"
   # Allow manual runs from the Actions tab
   workflow_dispatch:
 
@@ -67,3 +75,32 @@ jobs:
           # gh-pages pushes to origin using this token
           GIT_USER: "github-actions[bot]"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Report the outcome to the GitStatus Lambda, which records it in DynamoDB for
+      # the DailyDigest to surface. Runs on EVERY successful run: "updated" when the
+      # file changed, "up_to_date" otherwise. This heartbeat lets the digest detect a
+      # stalled workflow. The token gates the public Function URL (see GitStatus.mjs).
+      - name: Report status to Lambda
+        if: success()
+        env:
+          GIT_STATUS_URL: ${{ secrets.GIT_STATUS_URL }}
+          GIT_STATUS_TOKEN: ${{ secrets.GIT_STATUS_TOKEN }}
+          CHANGED: ${{ steps.diff.outputs.changed }}
+        run: |
+          if [ "$CHANGED" = "true" ]; then STATUS="updated"; else STATUS="up_to_date"; fi
+          curl -sS -X POST "$GIT_STATUS_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-Auth-Token: $GIT_STATUS_TOKEN" \
+            -d "{\"status\":\"$STATUS\",\"datetime\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"runUrl\":\"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}"
+
+      # Runs only if an earlier step failed, so the digest can show "last run failed".
+      - name: Report failure to Lambda
+        if: failure()
+        env:
+          GIT_STATUS_URL: ${{ secrets.GIT_STATUS_URL }}
+          GIT_STATUS_TOKEN: ${{ secrets.GIT_STATUS_TOKEN }}
+        run: |
+          curl -sS -X POST "$GIT_STATUS_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-Auth-Token: $GIT_STATUS_TOKEN" \
+            -d "{\"status\":\"failed\",\"datetime\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"runUrl\":\"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}"
