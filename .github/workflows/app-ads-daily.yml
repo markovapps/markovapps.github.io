@@ -50,9 +50,21 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Install dependencies
-        # Only needed for build/deploy, which run only when there are changes
+      # Cache node_modules keyed on package.json. No committed lockfile (see
+      # .npmrc), so we key on package.json instead of package-lock.json. CI is
+      # always ubuntu-latest, so caching platform-specific binaries is safe here.
+      - name: Cache node_modules
+        id: npm-cache
         if: steps.diff.outputs.changed == 'true'
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-node22-${{ hashFiles('package.json') }}
+
+      - name: Install dependencies
+        # Only needed for build/deploy, which run only when there are changes.
+        # Skipped entirely on a cache hit (package.json unchanged).
+        if: steps.diff.outputs.changed == 'true' && steps.npm-cache.outputs.cache-hit != 'true'
         run: npm install
 
       - name: Commit and push app-ads.txt
@@ -70,11 +82,18 @@ jobs:
 
       - name: Deploy to gh-pages
         if: steps.diff.outputs.changed == 'true'
-        run: npm run deploy
         env:
-          # gh-pages pushes to origin using this token
-          GIT_USER: "github-actions[bot]"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # gh-pages clones origin into its own cache dir, which has none of the
+          # credentials actions/checkout stored, and it doesn't read GITHUB_TOKEN
+          # itself — hence "could not read Username". Rewrite github.com HTTPS URLs
+          # to embed the token (applies to gh-pages' child clone too) and set a
+          # global committer identity, since that fresh clone has none.
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"
+          npm run deploy
 
       # Report the outcome to the GitStatus Lambda, which records it in DynamoDB for
       # the DailyDigest to surface. Runs on EVERY successful run: "updated" when the
