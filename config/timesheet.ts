@@ -69,8 +69,8 @@ export const timeSheet = {
     ],
     links: {
         google: "https://play.google.com/store/apps/details?id=com.themark.apps.salarysheet",
-        ios: "https://apps.apple.com/us/app/timesheet-paycheck-calculator/id6503091221",
-        contactUs: 'https://docs.google.com/forms/d/e/1FAIpQLSd6gJTIKvnUloDoGS9DiCnu5-ISSbyZBFymcrwmm5g-stWMWw/viewform?usp=sharing',
+        ios: "https://apps.apple.com/us/app/work-hours-tracker-timesheet/id6503091221",
+        contactUs: 'https://tally.so/r/81WjNo',
         privacyPolicy: "/timesheet/privacypolicy",
         terms: "/timesheet/terms",
         faq: ""
