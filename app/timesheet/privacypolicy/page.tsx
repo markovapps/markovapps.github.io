@@ -47,37 +47,14 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <br/>
                 <p>
                     Any calculations, statistics, estimates, projections or other values displayed by Timesheet
-                    are provided for <strong>informational and reference purposes only</strong>.
+                    are provided for informational and reference purposes only.
                 </p>
                 <br/>
                 <p>
-                    Timesheet is not a payroll, accounting, tax, legal, employment or financial advisory service.
-                    The Application does not determine the amount that your employer, client, payroll provider,
-                    tax authority or other party is legally required to pay, deduct, withhold or report.
-                </p>
-                <br/>
-                <p>
+                    Timesheet should not be relied upon as an official payroll statement, payslip, tax calculation,
+                    accounting record or determination of your legal entitlement to compensation.
                     Actual salary, wages, bonuses, deductions, taxes, social contributions, overtime payments,
-                    allowances and other amounts may differ from values calculated or displayed by Timesheet due to
-                    factors including:
-                </p>
-                <ul className="list-disc list-inside indent-2">
-                    <li>applicable laws and regulations;</li>
-                    <li>employment agreements or workplace policies;</li>
-                    <li>tax rules and withholding requirements;</li>
-                    <li>payroll calculation methods;</li>
-                    <li>rounding rules;</li>
-                    <li>employer-specific practices;</li>
-                    <li>information that was entered incorrectly, incompletely or differently in the Application;</li>
-                    <li>changes in laws, rates or other circumstances not reflected in the Application.</li>
-                </ul>
-                <br/>
-                <p>
-                    You are responsible for verifying the accuracy of information entered into Timesheet and for
-                    confirming any important calculations with your employer, payroll provider, accountant, tax adviser
-                    or other appropriate professional or authority. Timesheet should not be relied upon as an official
-                    payroll statement, payslip, tax calculation, accounting record or determination of your legal
-                    entitlement to compensation.
+                    allowances and other amounts may differ from values calculated or displayed by Timesheet.
                 </p>
                 <br/>
                 <p>
@@ -103,7 +80,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                 </ul>
                 <p>
                     This information is initially stored locally on your device. We do not have direct access to
-                    this locally stored information. Your work-related content are not sent to our servers.
+                    this locally stored information. Your work-related content is not sent to servers operated by us.
                 </p>
                 <br/>
                 <p>
@@ -216,6 +193,11 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <p>
                     Where required, you may be asked for consent to personalized advertising and tracking. If you refuse,
                     advertising may still be shown, but tracking and personalization are restricted.
+                </p>
+                <br/>
+                <p>
+                    On iOS, tracking may also be subject to Apple&apos;s App Tracking Transparency permission,
+                    which can be changed in iOS Settings.
                 </p>
                 <br/>
 
@@ -386,7 +368,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            Appodeal
+                            Appodeal (advertising mediation)
                         </a>
                     </li>
                     <li>
@@ -396,7 +378,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            Sentry
+                            Sentry (crash and error diagnostics)
                         </a>
                     </li>
                     <li>
@@ -406,7 +388,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            Google Forms
+                            Google Forms (feedback and support)
                         </a>
                     </li>
                 </ul>
@@ -419,14 +401,8 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <p>
                     Data stored locally or in your personal Google Drive or iCloud remains there until deleted
                     according to your device or cloud account settings.
-                </p>
-                <br/>
-                <p>
                     Third-party services retain analytics, advertising, subscription and other technical information
                     according to their own policies and settings.
-                </p>
-                <br/>
-                <p>
                     Support submissions made through Tally and historical Google Forms submissions are currently
                     stored without a fixed expiration period unless deleted manually or at your request.
                 </p>
@@ -451,9 +427,6 @@ export default function TimeSheetPrivacyPolicyPage() {
                     Where required by law, we process personal information based on your consent, the need to provide
                     requested functionality, our legitimate interests in operating and improving Timesheet,
                     or applicable legal obligations.
-                </p>
-                <br/>
-                <p>
                     Some third-party services operate internationally and may process information outside your country
                     according to their own privacy policies and applicable legal safeguards.
                 </p>
