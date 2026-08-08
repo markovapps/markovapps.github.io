@@ -2,7 +2,7 @@ import React from "react";
 
 import {title} from "@/components/primitives";
 
-export default function TimeSheetPrivacyPolicyPage() {
+export function TimeSheetPrivacyPolicyPage() {
     return (
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center">
@@ -15,12 +15,13 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <br/>
 
                 <strong>Privacy Policy</strong>
-                <p className="text-stone-400">Last Update: August 7, 2026</p>
+                <p className="text-stone-400">Originally effective: July 20, 2024</p>
                 <br/>
-                <p className="text-stone-400">Effective date: August 7, 2026</p>
+                <p className="text-stone-400">Last updated: August 8, 2026</p>
                 <p>
                     This Privacy Policy describes how <strong>Work hours tracker - Timesheet</strong>
-                    (the &quot;Application&quot;, &quot;Timesheet&quot;) processes information when you use the Application.
+                    (the &quot;Application&quot;, &quot;Timesheet&quot;) processes information when you use the
+                    Application.
                     The Application is developed and operated by &quot;Kanstantsin Markau&quot; (&quot;we&quot;,
                     &quot;us&quot;, or the &quot;Service Provider&quot;).
                 </p>
@@ -119,61 +120,35 @@ export default function TimeSheetPrivacyPolicyPage() {
 
                 <strong>3. Cloud Backup and Synchronization</strong>
                 <p>
-                    Timesheet may allow you to create, restore or synchronize Application data using your personal
-                    cloud storage. Backup data may contain work records, schedules, working hours, compensation-related
-                    information, comments, templates, settings, related metadata and other information created through
-                    Timesheet features. The exact contents of a backup may change as Timesheet functionality evolves.
+                    Timesheet allows you to optionally back up and restore your data using your personal Google Drive
+                    on Android or iCloud on iOS. Some Pro features on iOS may also automatically synchronize data
+                    through iCloud.
                 </p>
                 <br/>
                 <p>
-                    For technical backup and synchronization purposes, backup data may also include records or
-                    templates that have been marked as deleted in the Application.
+                    Backups may include work records, schedules, rates, earnings-related information, comments, templates,
+                    settings and other Timesheet data, including information needed to restore or synchronize previously
+                    deleted records.
                 </p>
                 <br/>
                 <p>
-                    Cloud backup data is not stored on servers operated by us.
-                </p>
-                <br/>
-
-                <i>Android and Google Drive</i>
-                <p>
-                    On Android, you can optionally connect your Google Account to create and restore Timesheet backups
-                    in Google Drive. Timesheet can access only the private area of Google Drive reserved for the
-                    Application. It does not have access to your other files or documents stored in Google Drive.
+                    Timesheet can access only the private cloud storage assigned to the Application and cannot access
+                    your other Google Drive or iCloud files. Cloud data is stored in your personal account and not on
+                    servers operated by us.
                 </p>
                 <br/>
                 <p>
-                    When you connect your Google Account, Google may provide Timesheet with basic account information
-                    such as your email address, name, account identifier and profile photo. Timesheet currently uses
-                    only your email address to show which Google Account is connected for backup. Other profile
-                    information is not used or stored by Timesheet.
+                    On Android, Google may provide basic account information when you connect your account.
+                    Timesheet uses only your email address to show which account is connected.
+                    On iOS, Timesheet does not receive your Apple Account information.
                 </p>
                 <br/>
                 <p>
-                    Your Timesheet backup remains in your personal Google Drive storage and is not uploaded to our servers.
-                    The Application currently does not provide an in-app option to delete all backup data stored in Google Drive.
-                    You can manage connected applications and stored data through your Google Account and Google Drive settings.
+                    Timesheet currently does not provide an in-app option to delete all cloud data. You can manage it
+                    through your Google or Apple account settings.
                 </p>
                 <br/>
 
-                <i>iOS and iCloud</i>
-                <p>
-                    On iOS, Timesheet may store backup and synchronization data in a private area of your personal
-                    iCloud storage. Timesheet does not have access to your other files or data stored in iCloud.
-                    Timesheet does not receive your Apple Account email address, name or account identifier for
-                    this functionality.
-                </p>
-                <br/>
-                <p>
-                    For supported Pro features, Timesheet may automatically synchronize your Application data between
-                    your Apple devices using iCloud. Your Timesheet data is not stored on servers operated by us.
-                </p>
-                <br/>
-                <p>
-                    The Application currently does not provide an in-app option to delete all Timesheet data
-                    stored in iCloud. You can manage iCloud access and storage through your Apple Account and device
-                    settings.
-                </p>
 
                 <strong>4. Data Export</strong>
                 <p>
@@ -185,690 +160,343 @@ export default function TimeSheetPrivacyPolicyPage() {
                 <br/>
                 <p>
                     Once you share a document with another application or service, that service&apos;s own
-                    privacy practices apply.  You are responsible for choosing where exported documents are sent and
+                    privacy practices apply. You are responsible for choosing where exported documents are sent and
                     for reviewing their contents before sharing them.
                 </p>
 
-                <strong>5. Firebase Analytics</strong>
-
-
-                Timesheet uses Google Firebase Analytics on Android and iOS to understand how users interact with the Application and to improve its features.
-
-                Analytics may include information such as:
-
-                features and screens used;
-                interactions with the Application;
-                onboarding and product usage;
-                advertising and subscription-related interactions;
-                Application version;
-                device and operating system information;
-                language, country or similar general technical information;
-                anonymous or pseudonymous identifiers used by Firebase.
-
-                The specific analytics events we collect may change as Timesheet features evolve.
-
-                We do not send the contents of your work records, working hours, salary amounts, rates, comments, templates or other information you enter about your work to Firebase Analytics.
-
-                Firebase Analytics is enabled by default and operates independently from advertising consent and Apple's App Tracking Transparency permission.
-
-                7. Firebase Performance Monitoring
-
-                Timesheet uses Firebase Performance Monitoring on Android and iOS to identify technical problems and improve Application performance.
-
-                This service may collect technical information such as:
-
-                Application startup and screen performance;
-                network request performance;
-                operation duration;
-                response status;
-                amounts of data being processed or transferred;
-                Application version;
-                device and operating system information.
-
-                Timesheet may also collect technical counts, sizes and timings to understand the performance of features such as backups, exports, database operations and widgets.
-
-                These measurements do not contain the contents of your work records, salary information, rates, comments or other user-entered work data.
-
-                8. Advertising
-
-                Timesheet displays advertising on Android and iOS.
-
-                Advertising is not displayed to users with an applicable Timesheet Pro subscription.
-
-                Current versions of Timesheet use CAS.AI (Clever Ads Solutions) to provide and manage advertising.
-
-                CAS.AI works with multiple third-party advertising networks. The specific advertising providers used may change over time.
-
-                Depending on your device, region, permissions and advertising choices, CAS.AI and its advertising partners may receive information such as:
-
-                advertising and device identifiers;
-                IP address;
-                device and operating system information;
-                Application information;
-                approximate or other location-related information where available and permitted;
-                advertisement impressions and clicks;
-                other advertising, usage and diagnostic information.
-
-                This information may be used to:
-
-                display advertisements;
-                personalize advertisements where permitted;
-                measure advertising performance;
-                limit how often advertisements are shown;
-                prevent fraud and abuse;
-                perform related advertising and analytics functions.
-
-                We do not provide advertising partners with your Timesheet work records, salary information, rates or comments.
-
-                Not every advertising provider included through CAS.AI necessarily receives information from every user. This depends on factors such as the advertising request, region, consent choices and mediation configuration.
-
-                Advertising Consent
-
-                Where required, Timesheet may show a consent form provided through CAS.AI or its consent management provider.
-
-                If you refuse advertising consent, tracking and personalization are restricted, but advertising may still be shown.
-
-                Advertising providers may still receive limited technical information required to display and measure non-personalized or restricted advertising and to prevent fraud.
-
-                On iOS, Timesheet may also show Apple's App Tracking Transparency permission request.
-
-                If you deny this permission, tracking and access to Apple's advertising identifier are restricted according to Apple's rules.
-
-                You can change the App Tracking Transparency permission through your iOS privacy settings.
-
-                The advertising consent form currently cannot be manually reopened from within Timesheet after your initial choice.
-
-                9. Subscriptions and RevenueCat
-
-                On iOS, Timesheet uses RevenueCat to manage Timesheet Pro subscriptions.
-
-                Timesheet currently offers monthly and annual subscriptions.
-
-                RevenueCat uses an anonymous identifier to manage subscription status.
-
-                We do not provide RevenueCat with your email address, work records, salary information, comments or other Timesheet work data.
-
-                RevenueCat may receive information related to your subscription, such as:
-
-                the subscription product;
-                purchase and transaction information;
-                subscription status;
-                expiration and renewal information;
-                related technical information.
-
-                Payments are processed by Apple through the App Store. We do not receive your full payment card details.
-
-                10. Feedback and Support
-
-                You can contact us by email or through the feedback form provided using Tally.
-
-                The feedback form may collect the following information.
-
-                Required:
-
-                email address, so that we can reply;
-                your message, such as a question, suggestion or bug report;
-                platform, Android or iOS.
-
-                Optional:
-
-                your name;
-                device model or device name;
-                Application version;
-                up to three screenshots.
-
-                When you open the feedback form directly from Timesheet, some technical information may be automatically added or prefilled to help us investigate technical problems.
-
-                This may include:
-
-                Android or iOS;
-                device information;
-                Application version;
-                operating system version.
-
-                Some prefilled fields can be removed before submitting the form.
-
-                We use this information only to respond to your request, investigate reported problems, understand feedback and improve Timesheet.
-
-                Screenshots are submitted voluntarily and may contain information visible on your device. Please review screenshots before sending them and avoid sharing passwords, authentication codes, payment information or other sensitive information that you do not want to provide to us.
-
-                Feedback Retention
-
-                Feedback and support submissions are currently stored without a predetermined expiration period.
-
-                They remain stored until:
-
-                you ask us to delete them;
-                we manually delete them;
-                deletion is required by applicable law.
-
-                If you want us to delete a support or feedback submission, contact us at:
-
-                thoughtsafe.bonnstsmark@gmail.com
-
-                We may ask for information such as the email address used in the submission so that we can identify the correct record.
-
-                11. Third-Party Services
-
-                Timesheet currently uses third-party services for functions such as advertising, analytics, performance monitoring, cloud backup, subscriptions and support.
-
-                These include:
-
-                CAS.AI and advertising partners available through CAS.AI;
-                Google Firebase Analytics;
-                Firebase Performance Monitoring;
-                Google services used for Android backup;
-                Apple iCloud;
-                Apple App Store;
-                RevenueCat;
-                Tally.
-
-                These companies may process information according to their own privacy policies and terms.
-
-                Their storage locations, retention periods and processing practices may differ from ours.
-
-                The specific advertising partners available through CAS.AI may change over time.
-
-                12. Legacy Versions and Previously Used Services
-
-                Some users may continue to use older versions of Timesheet.
-
-                Older versions may contain services or SDKs that are no longer included in the current version of the Application.
-
-                Appodeal
-
-                Until approximately the end of December 2025, Timesheet used Appodeal as its advertising mediation provider.
-
-                Older versions of Timesheet may continue to contain Appodeal and advertising partners provided through Appodeal.
-
-                These services may process advertising identifiers, device information, IP address, location-related information, advertising interactions, usage information and diagnostic information according to their own privacy practices.
-
-                Current versions of Timesheet use CAS.AI instead of Appodeal.
-
-                Sentry
-
-                Older versions of Timesheet used Sentry to detect crashes and technical errors.
-
-                Sentry is no longer used in current versions of Timesheet.
-
-                Users running older versions may still send diagnostic information to Sentry.
-
-                Historical diagnostic information collected through Sentry may remain stored in our Sentry project even though we no longer actively use Sentry.
-
-                Google Forms
-
-                Earlier versions of our feedback process used Google Forms instead of Tally.
-
-                Previously submitted feedback and support requests may still remain stored in Google services.
-
-                These historical submissions are currently stored without a predetermined expiration period unless they are manually deleted, deletion is requested by the user, or deletion is required by law.
-
-                13. Data Retention
-
-                Different types of information are stored for different periods.
-
-                Timesheet data stored locally on your device remains there until you delete the relevant information, remove Application data or uninstall the Application, subject to your device's backup and restoration settings.
-
-                Cloud backup and synchronization data remains in your personal Google Drive or iCloud storage according to your cloud account settings and the policies of Google or Apple.
-
-                Firebase, CAS.AI, advertising partners and RevenueCat may retain technical or service-related information according to their own settings, policies and legal obligations.
-
-                Tally feedback and support submissions are currently stored without a predetermined expiration period unless deleted manually or at your request.
-
-                Historical Google Forms submissions are also currently stored without a predetermined expiration period.
-
-                Historical Sentry data may remain stored according to the applicable Sentry project settings and retention rules.
-
-                We may also keep information when reasonably necessary to comply with legal obligations, resolve disputes, prevent fraud or protect our legal rights.
-
-                14. Your Choices and Controls
-
-                Depending on the feature, you may be able to:
-
-                edit or delete locally stored Timesheet data;
-                uninstall the Application and remove its local data;
-                manage Google Drive access through your Google Account;
-                manage iCloud access through your Apple Account and device settings;
-                decide whether to create, save or share exported documents;
-                control Apple's App Tracking Transparency permission through iOS settings;
-                make advertising consent choices when the applicable consent form is shown;
-                request deletion of support or feedback information that we can identify.
-
-                Timesheet does not create or maintain a separate Timesheet user account on our servers.
-
-                Because your locally stored work data and personal cloud backup data are not stored on our servers, we generally cannot access, retrieve or delete that information for you.
-
-                15. Your Privacy Rights
-
-                Depending on where you live, applicable privacy law may give you rights regarding your personal information.
-
-                These rights may include the right to:
-
-                request access to your personal information;
-                request correction of inaccurate information;
-                request deletion;
-                restrict or object to certain processing;
-                request data portability where applicable;
-                withdraw consent where processing is based on consent;
-                file a complaint with a data protection authority.
-
-                Some analytics and advertising information is associated with anonymous or pseudonymous device or Application identifiers rather than your name or email address. Because of this, we may not always be able to identify or retrieve a specific record based on an email request.
-
-                For information that we directly control and can reasonably identify, you can contact us at:
-
-                thoughtsafe.bonnstsmark@gmail.com
-
-                16. Legal Bases for Processing
-
-                Where applicable law requires a legal basis for processing personal information, the legal basis depends on the purpose of the processing.
-
-                Where required, advertising personalization and tracking may be based on your consent.
-
-                Other processing may be necessary to:
-
-                provide features that you request;
-                manage subscriptions;
-                provide customer support;
-                improve Application performance and functionality;
-                maintain security and prevent fraud;
-                comply with legal obligations;
-                protect our legitimate interests and legal rights.
-                17. International Data Processing
-
-                Some third-party services used by Timesheet operate internationally.
-
-                As a result, advertising, analytics, performance, subscription or support information may be processed in countries other than the country where you live.
-
-                These providers are responsible for handling international transfers according to their own legal obligations and privacy policies.
-
-                Your locally stored Timesheet work data is not transferred internationally by us simply because you use the Application.
-
-                If you use Google Drive, iCloud, an export destination or another third-party service, that provider may process your information according to its own infrastructure and privacy practices.
-
-                18. Security
-
-                We take reasonable measures to protect information that we control.
-
-                However, no electronic storage or transmission method can be guaranteed to be completely secure.
-
-                For data stored on your device, Google Drive or iCloud, security also depends on your device, operating system, cloud account and account credentials.
-
-                We recommend using the security features provided by your device and cloud providers.
-
-                19. Disclosure Required by Law
-
-                We may disclose information that we control where reasonably necessary to:
-
-                comply with applicable law or a valid legal request;
-                respond to a court order or lawful government request;
-                investigate fraud, abuse or security threats;
-                protect our legal rights;
-                protect users, the public or the Application.
-
-                We cannot disclose Timesheet work data that we do not possess or have access to.
-
-                20. Children's Privacy
-
-                Timesheet is not directed to children under the age of 13, or a higher minimum age where required by applicable law.
-
-                We do not knowingly collect personal information from children in violation of applicable law.
-
-                If you are a parent or guardian and believe that a child has submitted personal information to us through a support or feedback channel, contact us at:
-
-                thoughtsafe.bonnstsmark@gmail.com
-
-                If required by applicable law, we will take reasonable steps to delete the information.
-
-                21. Changes to This Privacy Policy
-
-                We may update this Privacy Policy when Timesheet features, third-party services, legal requirements or our data practices change.
-
-                When we update this Privacy Policy, we will publish the revised version and update the "Last updated" date at the top of the page.
-
-                Where applicable law requires additional notice or consent for a material change, we will provide it through an appropriate method.
-
-                22. Contact
-
-                The data controller responsible for the processing described in this Privacy Policy is:
-
-                Kanstantsin Markau
-
-                For privacy questions, requests or requests to delete support or feedback information, contact:
-
-                thoughtsafe.bonnstsmark@gmail.com
-
-
+                <strong>5. Usage, Analytics and Performance Information</strong>
+                <p>
+                    Timesheet uses analytics and performance services to understand how the Application is used,
+                    evaluate and improve its features, identify technical problems and monitor Application performance.
+                </p>
+                <br/>
+                <p>
+                    Timesheet and the services used for these purposes may process information such as:
+                </p>
                 <ul className="list-disc list-inside indent-2">
-                    <li>Your device&apos;s Internet Protocol address (e.g. IP address)</li>
-                    <li>The pages of the Application that you visit, the time and date of your visit, the time spent
-                        on those pages
-                    </li>
-                    <li>The time spent on the Application</li>
-                    <li>The operating system you use on your mobile device</li>
-                    <li>The type of mobile device you use</li>
-                    <li>Your mobile devices unique device ID</li>
+                    <li>interactions with the Application and its features;</li>
+                    <li>device and operating system information;</li>
+                    <li>Application version and language;</li>
+                    <li>general regional information;</li>
+                    <li>IP address and similar network information;</li>
+                    <li>anonymous or pseudonymous Application and device identifiers;</li>
+                    <li>performance measurements, timings and diagnostic information;</li>
+                    <li>technical counts, sizes, statuses and similar information needed to evaluate Application performance.</li>
                 </ul>
+                <br/>
 
                 <p>
-                    The Application does not gather precise information about the location of your mobile device.
+                    The specific analytics events and technical measurements may change as Timesheet functionality evolves.
+                    We do not send the contents of your work records or other work-related information you enter into
+                    Timesheet for analytics or performance monitoring purposes.
                 </p>
+                <br/>
+
+                <strong>6. Advertising</strong>
                 <p>
-                    The Service Provider may use the information you provided to
-                    contact you from time to time to provide you with important information,
-                    required notices and marketing promotions.
+                    Timesheet displays advertising on Android and iOS. Ads are removed for users with an applicable
+                    Timesheet Pro subscription. Current versions use CAS.AI (Clever Ads Solutions), which works with
+                    third-party advertising networks. Advertising services may process information such as:
+                </p>
+                <ul className="list-disc list-inside indent-2">
+                    <li>advertising and device identifiers;</li>
+                    <li>IP address;</li>
+                    <li>device, operating system and Application information;</li>
+                    <li>approximate or other location-related information;</li>
+                    <li>advertising impressions, clicks and interactions;</li>
+                    <li>usage and diagnostic information;</li>
+                    <li>other technical information required to request, display, measure and protect advertising.</li>
+                </ul>
+                <br/>
+                <p>
+                    Where required, you may be asked for consent to personalized advertising and tracking. If you refuse,
+                    advertising may still be shown, but tracking and personalization are restricted.
+                </p>
+                <br/>
+
+                <strong>7. Purchases and Subscriptions</strong>
+                <p>
+                    Timesheet offers Pro subscriptions on iOS. Subscriptions are processed through Apple&apos;s App Store.
+                    Timesheet also uses RevenueCat to manage and verify subscription status. RevenueCat uses an anonymous
+                    identifier for this purpose.
                 </p>
                 <br/>
                 <p>
-                    For a better experience, while using the Application, the Service Provider
-                    may require you to provide us with certain personally identifiable information.
-                    The information that the Service Provider request will be retained by them
-                    and used as described in this privacy policy.
+                    Subscription services may process information such as the subscription product, purchase and
+                    transaction information, subscription status, expiration or renewal information and related
+                    technical information.
+                    We do not provide RevenueCat with your email address or the contents of your Timesheet work data.
+                    Payments are handled by Apple through the App Store.
+                </p>
+
+                <strong>8. Feedback and Support</strong>
+                <p>
+                    You can contact us by email or through the feedback form provided using Tally.
+                    When you submit the feedback form, we may receive:
+                </p>
+                <ul className="list-disc list-inside indent-2">
+                    <li>your email address;</li>
+                    <li>your message, such as a question, suggestion or bug report;</li>
+                    <li>whether you use Android or iOS;</li>
+                    <li>your name, if you choose to provide it;</li>
+                    <li>device information;</li>
+                    <li>Application version;</li>
+                    <li>operating system version;</li>
+                    <li>up to three screenshots, if you choose to attach them.</li>
+                </ul>
+                <p>
+                    When you open the feedback form directly from Timesheet, some technical information may be
+                    automatically added or prefilled to help us investigate problems. Some of these fields can be
+                    removed before submitting the form. We use this information to respond to your request,
+                    investigate reported problems, understand feedback and improve Timesheet.
                 </p>
                 <br/>
-                <strong>Support Communication</strong>
                 <p>
-                    We collect your name and email address when you contact us through our support
-                    email at thoughtsafe.bonnstsmark@gmail.com or by submitting a form to our support team.
-                    This information is used solely for the purpose of responding to your inquiries
-                    and providing assistance.
+                    Screenshots are submitted voluntarily and may contain information visible on your device.
+                    Please review screenshots before sending them and avoid sharing passwords, authentication codes,
+                    payment information or other sensitive information that you do not want to provide to us.
+                </p>
+
+                <strong>9. Third-Party Services</strong>
+                <p>
+                    Timesheet relies on third-party services for functions including analytics, performance monitoring,
+                    advertising, cloud backup, subscriptions and support.
                 </p>
                 <br/>
-                <strong>Third Party Access</strong>
                 <p>
-                    Only aggregated, anonymized data is periodically transmitted to external
-                    services to aid the Service Provider in improving the Application and
-                    their service. The Service Provider may share your information with
-                    third parties in the ways that are described in this privacy statement.
-                </p>
-                <div>
-                    <br/>
-                    <p>
-                        Please note that the Application utilizes third-party services that
-                        have their own Privacy Policy about handling data. Below are the links
-                        to the Privacy Policy of the third-party service providers used by the
-                        Application:
-                    </p>
-                    <ul>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://www.google.com/policies/privacy/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Google Play Services
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://support.google.com/admob/answer/6128543?hl=en"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                AdMob
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://firebase.google.com/support/privacy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Google Analytics for Firebase
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://www.appodeal.com/home/privacy-policy/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Appodeal
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://expo.io/privacy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Expo
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://www.applovin.com/privacy/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                AppLovin
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://www.revenuecat.com/privacy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                RevenueCat
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://sentry.io/privacy"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Sentry
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                className="text-blue-600"
-                                href="https://www.apple.com/legal/internet-services/icloud/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                iCloud
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <p>
-                    The Service Provider may disclose User Provided and Automatically
-                    Collected Information:
+                    Current services include:
                 </p>
                 <ul className="list-disc list-inside indent-2">
                     <li>
-                        as required by law, such as to comply with a subpoena, or similar
-                        legal process;
+                        <p>
+                            <strong>Google Firebase</strong>, for analytics and performance monitoring
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://firebase.google.com/support/privacy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Firebase Privacy and Security
+                        </a>
                     </li>
                     <li>
-                        when they believe in good faith that disclosure is necessary to
-                        protect their rights, protect your safety or the safety of others,
-                        investigate fraud, or respond to a government request;
+                        <p>
+                            <strong>Google Drive</strong>, for optional cloud backup on Android
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://policies.google.com/privacy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Google Privacy Policy
+                        </a>
                     </li>
                     <li>
-                        with their trusted services providers who work on their behalf, do not
-                        have an independent use of the information we disclose to them, and
-                        have agreed to adhere to the rules set forth in this privacy
-                        statement.
+                        <p>
+                            <strong>CAS.AI / Clever Ads Solutions</strong>, for advertising and advertising mediation
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://cas.ai/privacy-policy/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            CAS.AI Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Apple App Store</strong>, for subscription purchase and payment processing
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://www.apple.com/legal/privacy/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Apple Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Apple iCloud</strong>, for backup and synchronization on iOS
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://www.apple.com/legal/internet-services/icloud/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            iCloud Terms and Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>RevenueCat</strong>, for subscription management on iOS
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://www.revenuecat.com/privacy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            RevenueCat Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Tally</strong>, for feedback and support forms
+                        </p>
+                        <br/>
+                        <a
+                            className="text-blue-600"
+                            href="https://tally.so/help/privacy-policy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Tally Privacy Policy
+                        </a>
                     </li>
                 </ul>
-                <p/>
                 <br/>
-                <strong>Use of iCloud Sync and Device Synchronization</strong>
                 <p>
-                    Certain features of the App (including automatic iCloud sync and synchronization
-                    across multiple devices) rely on Apple’s iCloud service. When you enable these features,
-                    your App data is stored in your personal iCloud account.
+                    CAS.AI may work with additional advertising networks and mediation partners. The specific
+                    advertising partners available through CAS.AI may change over time.
                 </p>
                 <br/>
-                <i>iCloud Storage Requirements</i>
-                <p>To use iCloud sync, you must have:</p>
-                <ul className="list-disc list-inside indent-2">
-                    <li>
-                        A valid Apple ID,
-                    </li>
-                    <li>
-                        iCloud enabled on your device,
-                    </li>
-                    <li>
-                        Sufficient available storage in your iCloud account.
-                    </li>
-                </ul>
                 <p>
-                    If your iCloud storage is full, data may not sync or update properly.
+                    These third-party services may process information according to their own privacy policies, terms,
+                    configurations and legal obligations. Their data retention periods, storage locations and privacy
+                    practices may differ from ours.
+                </p>
+
+                <strong>10. Previously Used Services and Older Versions</strong>
+                <p>
+                    Some users may continue to use older versions of Timesheet that include services no longer used
+                    in current versions. Previously used services:
                 </p>
                 <br/>
-                <i>Internet Connection</i>
-                <p>
-                    iCloud sync requires an active internet connection (Wi-Fi or mobile data).
-                    If your device is offline, changes will be synced once a connection is restored.
-                </p>
-                <br/>
-                <i>How Data Is Stored and Processed</i>
-                <ul className="list-disc list-inside indent-2">
+                <ul>
                     <li>
-                        Your data is stored only in your iCloud account and on your devices.
+                        <a
+                            className="text-blue-600"
+                            href="https://www.appodeal.com/home/privacy-policy/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Appodeal
+                        </a>
                     </li>
                     <li>
-                         We do not have access to your iCloud data and cannot read, modify, or delete it.
+                        <a
+                            className="text-blue-600"
+                            href="https://sentry.io/privacy"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Sentry
+                        </a>
                     </li>
                     <li>
-                        Apple processes and stores your iCloud data in accordance with its own Privacy Policy
-                        and security practices.
-                    </li>
-                </ul>
-                <br/>
-                <i>Synchronization Between Devices</i>
-                <p>If you use multiple iOS devices logged in to the same Apple ID:</p>
-                <ul className="list-disc list-inside indent-2">
-                    <li>
-                        Your data may be automatically synced between these devices through iCloud.
-                    </li>
-                    <li>
-                        The functionality depends on iCloud availability, device settings, and network conditions.
+                        <a
+                            className="text-blue-600"
+                            href="https://transparency.google/intl/en_us/our-policies/product-terms/google-forms/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Google Forms
+                        </a>
                     </li>
                 </ul>
                 <br/>
-                <i>User Control</i>
                 <p>
-                    You can enable or disable iCloud sync at any time in your device’s iCloud settings.
+                    We recommend using the latest version of Timesheet.
                 </p>
+
+                <strong>11. Data Retention</strong>
                 <p>
-                    Disabling iCloud sync will stop new data from being uploaded to iCloud, but previously
-                    synced data may remain in your iCloud account until you remove it manually through iCloud settings.
-                </p>
-                <br/>
-                <strong>Opt-Out Rights</strong>
-                <p>
-                    You can stop all collection of information by the Application easily by
-                    uninstalling it. You may use the standard uninstall processes
-                    as may be available as part of your mobile device or via the mobile application
-                    marketplace or network.
+                    Data stored locally or in your personal Google Drive or iCloud remains there until deleted
+                    according to your device or cloud account settings.
                 </p>
                 <br/>
-                <strong>Data Retention Policy</strong>
                 <p>
-                    The Service Provider will retain User Provided data for as long as you
-                    use the Application and for a reasonable time thereafter. The Service
-                    Provider will retain Automatically Collected information for up to 24
-                    months and thereafter may store it in aggregate. If you&apos;d like the
-                    Service Provider to delete User Provided Data that you have provided via
-                    the Application, please contact them at
-                    thoughtsafe.bonnstsmark@gmail.com and they will respond in a reasonable
-                    time. Please note that some or all of the User Provided Data may be
-                    required in order for the Application to function properly.
+                    Third-party services retain analytics, advertising, subscription and other technical information
+                    according to their own policies and settings.
                 </p>
                 <br/>
-                <strong>Children</strong>
                 <p>
-                    The Service Provider does not use the Application to knowingly solicit
-                    data from or market to children under the age of 13.
+                    Support submissions made through Tally and historical Google Forms submissions are currently
+                    stored without a fixed expiration period unless deleted manually or at your request.
                 </p>
-                <div>
-                    <br/>
-                    <p>
-                        The Application does not address anyone under the age of 13. The
-                        Service Provider does not knowingly collect personally identifiable
-                        information from children under 13 years of age. In the case the
-                        Service Provider discover that a child under 13 has provided personal
-                        information, the Service Provider will immediately delete this from
-                        their servers. If you are a parent or guardian and you are aware that
-                        your child has provided us with personal information, please contact
-                        the Service Provider (thoughtsafe.bonnstsmark@gmail.com) so that they
-                        will be able to take the necessary actions.
-                    </p>
-                </div>
-                <br/>
-                <strong>Security</strong>
+
+                <strong>12. Your Privacy Rights</strong>
                 <p>
-                    The Service Provider are concerned about safeguarding the
-                    confidentiality of your information. The Service Provider provides
-                    physical, electronic, and procedural safeguards to protect information
-                    the Service Provider processes and maintains. For example, we limit access to this
-                    information to authorized employees and contractors who need to know
-                    that information in order to operate, develop or improve their
-                    Application. Please be aware that, although we endeavor provide
-                    reasonable security for information we process and maintain, no security
-                    system can prevent all potential security breaches.
+                    Depending on applicable law, you may have rights to access, correct, delete, restrict or object to
+                    the processing of your personal information, withdraw consent, or request data portability.
+                    Timesheet does not store your work data on our servers, so we generally cannot access or delete
+                    data stored only on your device, Google Drive or iCloud.
                 </p>
                 <br/>
-                <strong>Changes</strong>
                 <p>
-                    This Privacy Policy may be updated from time to time for any reason. The
-                    Service Provider will notify you of any changes to the Privacy Policy by
-                    updating this page with the new Privacy Policy. You are advised to
-                    consult this Privacy Policy regularly for any changes, as continued use
-                    is deemed approval of all changes.
+                    For personal information that we control and can identify, you can submit a privacy request at
+                    [thoughtsafe.bonnstsmark@gmail.com](mailto:thoughtsafe.bonnstsmark@gmail.com).
+                </p>
+
+                <strong>13. Legal Basis and International Processing</strong>
+                <p>
+                    Where required by law, we process personal information based on your consent, the need to provide
+                    requested functionality, our legitimate interests in operating and improving Timesheet,
+                    or applicable legal obligations.
+                </p>
+                <br/>
+                <p>
+                    Some third-party services operate internationally and may process information outside your country
+                    according to their own privacy policies and applicable legal safeguards.
                 </p>
                 <br/>
 
-                <p>This privacy policy is effective as of 2024-07-20</p>
-                <br/>
-                <strong>Your Consent</strong>
+                <strong>14. Security</strong>
                 <p>
-                    By using the Application, you are consenting to the Service
-                    Provider processing of your information as set forth in this Privacy
-                    Policy now and as amended by us. &quot;Processing&quot; means using
-                    cookies on a computer/hand held device or using or touching information
-                    in any way, including, but not limited to, collecting, storing,
-                    deleting, using, combining and disclosing information.
+                    We take reasonable measures to protect information we control, but no method of electronic storage
+                    or transmission is completely secure. The security of information stored on your device,
+                    Google Drive or iCloud also depends on the security of those devices and accounts.
+                </p>
+                <br/>
+
+                <strong>15. Children&apos;s Privacy</strong>
+                <p>
+                    Timesheet is not directed to children under 13, or a higher minimum age where required by applicable
+                    law. If you believe a child has provided personal information to us, contact us.
+                </p>
+                <br/>
+
+                <strong>16. Changes to This Privacy Policy</strong>
+                <p>
+                    We may update this Privacy Policy when our features, services, legal requirements or data practices change.
+                    The latest version will be published on this page with an updated revision date.
+                </p>
+
+                <strong>17. Consent and Acceptance</strong>
+                <p>
+                    By using Timesheet, you acknowledge that you have read this Privacy Policy and understand how
+                    information is handled as described here. Where your consent is required by applicable law,
+                    Timesheet or its service providers will request it separately. This may include consent for
+                    advertising-related data processing or tracking.
                 </p>
                 <br/>
                 <p>
-                    IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY,
-                    PLEASE DO NOT ACCESS THE APP.
+                    If you do not agree with this Privacy Policy, please do not use the Application.
                 </p>
                 <br/>
-                <strong>Contact us</strong>
-                <p>
-                    If you have any questions regarding privacy while using the Application,
-                    or have questions about the practices, please contact the Service
-                    Provider via email at thoughtsafe.bonnstsmark@gmail.com.
-                </p>
-                <br/>
-                <hr/>
-                <br/>
-                <p>
-                    This privacy policy page was generated by {" "}
-                    <a
-                        href="https://app-privacy-policy-generator.nisrulz.com/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="text-blue-600"
-                    >
-                        App Privacy Policy Generator
-                    </a>
-                </p>
+
             </div>
         </section>
     );
