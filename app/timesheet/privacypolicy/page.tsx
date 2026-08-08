@@ -2,7 +2,7 @@ import React from "react";
 
 import {title} from "@/components/primitives";
 
-export function TimeSheetPrivacyPolicyPage() {
+export default function TimeSheetPrivacyPolicyPage() {
     return (
         <section
             className="relative bg-cover bg-center bg-no-repeat flex items-center justify-center">
@@ -16,10 +16,11 @@ export function TimeSheetPrivacyPolicyPage() {
 
                 <strong>Privacy Policy</strong>
                 <p className="text-stone-400">Originally effective: July 20, 2024</p>
-                <br/>
                 <p className="text-stone-400">Last updated: August 8, 2026</p>
+                <br/>
+
                 <p>
-                    This Privacy Policy describes how <strong>Work hours tracker - Timesheet</strong>
+                    This Privacy Policy describes how <strong>Work hours tracker - Timesheet </strong>
                     (the &quot;Application&quot;, &quot;Timesheet&quot;) processes information when you use the
                     Application.
                     The Application is developed and operated by &quot;Kanstantsin Markau&quot; (&quot;we&quot;,
@@ -28,7 +29,7 @@ export function TimeSheetPrivacyPolicyPage() {
                 <br/>
                 <p>
                     For privacy-related questions or requests, you can contact us at:
-                    <strong>[thoughtsafe.bonnstsmark@gmail.com](mailto:thoughtsafe.bonnstsmark@gmail.com)</strong>
+                    <strong> thoughtsafe.bonnstsmark@gmail.com</strong>
                 </p>
                 <br/>
                 <p>
@@ -70,6 +71,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     <li>information that was entered incorrectly, incompletely or differently in the Application;</li>
                     <li>changes in laws, rates or other circumstances not reflected in the Application.</li>
                 </ul>
+                <br/>
                 <p>
                     You are responsible for verifying the accuracy of information entered into Timesheet and for
                     confirming any important calculations with your employer, payroll provider, accountant, tax adviser
@@ -84,6 +86,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     reported or otherwise determined by an employer, client, payroll provider, government authority or
                     other third party.
                 </p>
+                <br/>
 
                 <strong>2. Work Data Stored on Your Device</strong>
                 <p>
@@ -117,6 +120,7 @@ export function TimeSheetPrivacyPolicyPage() {
                 <p>
                     These situations are described in more detail below.
                 </p>
+                <br/>
 
                 <strong>3. Cloud Backup and Synchronization</strong>
                 <p>
@@ -163,6 +167,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     privacy practices apply. You are responsible for choosing where exported documents are sent and
                     for reviewing their contents before sharing them.
                 </p>
+                <br/>
 
                 <strong>5. Usage, Analytics and Performance Information</strong>
                 <p>
@@ -228,6 +233,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     We do not provide RevenueCat with your email address or the contents of your Timesheet work data.
                     Payments are handled by Apple through the App Store.
                 </p>
+                <br/>
 
                 <strong>8. Feedback and Support</strong>
                 <p>
@@ -244,6 +250,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     <li>operating system version;</li>
                     <li>up to three screenshots, if you choose to attach them.</li>
                 </ul>
+                <br/>
                 <p>
                     When you open the feedback form directly from Timesheet, some technical information may be
                     automatically added or prefilled to help us investigate problems. Some of these fields can be
@@ -256,6 +263,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     Please review screenshots before sending them and avoid sharing passwords, authentication codes,
                     payment information or other sensitive information that you do not want to provide to us.
                 </p>
+                <br/>
 
                 <strong>9. Third-Party Services</strong>
                 <p>
@@ -268,10 +276,7 @@ export function TimeSheetPrivacyPolicyPage() {
                 </p>
                 <ul className="list-disc list-inside indent-2">
                     <li>
-                        <p>
-                            <strong>Google Firebase</strong>, for analytics and performance monitoring
-                        </p>
-                        <br/>
+                        <strong>Google Firebase</strong>, for analytics and performance monitoring (
                         <a
                             className="text-blue-600"
                             href="https://firebase.google.com/support/privacy"
@@ -280,12 +285,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             Firebase Privacy and Security
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>Google Drive</strong>, for optional cloud backup on Android
-                        </p>
-                        <br/>
+                        <strong>Google Drive</strong>, for optional cloud backup on Android (
                         <a
                             className="text-blue-600"
                             href="https://policies.google.com/privacy"
@@ -294,12 +297,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             Google Privacy Policy
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>CAS.AI / Clever Ads Solutions</strong>, for advertising and advertising mediation
-                        </p>
-                        <br/>
+                        <strong>CAS.AI / Clever Ads Solutions</strong>, for advertising and advertising mediation (
                         <a
                             className="text-blue-600"
                             href="https://cas.ai/privacy-policy/"
@@ -308,12 +309,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             CAS.AI Privacy Policy
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>Apple App Store</strong>, for subscription purchase and payment processing
-                        </p>
-                        <br/>
+                        <strong>Apple App Store</strong>, for subscription purchase and payment processing (
                         <a
                             className="text-blue-600"
                             href="https://www.apple.com/legal/privacy/"
@@ -322,12 +321,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             Apple Privacy Policy
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>Apple iCloud</strong>, for backup and synchronization on iOS
-                        </p>
-                        <br/>
+                        <strong>Apple iCloud</strong>, for backup and synchronization on iOS (
                         <a
                             className="text-blue-600"
                             href="https://www.apple.com/legal/internet-services/icloud/"
@@ -336,12 +333,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             iCloud Terms and Conditions
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>RevenueCat</strong>, for subscription management on iOS
-                        </p>
-                        <br/>
+                        <strong>RevenueCat</strong>, for subscription management on iOS (
                         <a
                             className="text-blue-600"
                             href="https://www.revenuecat.com/privacy"
@@ -350,12 +345,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             RevenueCat Privacy Policy
                         </a>
+                        )
                     </li>
                     <li>
-                        <p>
-                            <strong>Tally</strong>, for feedback and support forms
-                        </p>
-                        <br/>
+                        <strong>Tally</strong>, for feedback and support forms (
                         <a
                             className="text-blue-600"
                             href="https://tally.so/help/privacy-policy"
@@ -364,6 +357,7 @@ export function TimeSheetPrivacyPolicyPage() {
                         >
                             Tally Privacy Policy
                         </a>
+                        )
                     </li>
                 </ul>
                 <br/>
@@ -377,14 +371,14 @@ export function TimeSheetPrivacyPolicyPage() {
                     configurations and legal obligations. Their data retention periods, storage locations and privacy
                     practices may differ from ours.
                 </p>
+                <br/>
 
                 <strong>10. Previously Used Services and Older Versions</strong>
                 <p>
                     Some users may continue to use older versions of Timesheet that include services no longer used
                     in current versions. Previously used services:
                 </p>
-                <br/>
-                <ul>
+                <ul className="list-disc list-inside indent-2">
                     <li>
                         <a
                             className="text-blue-600"
@@ -416,10 +410,10 @@ export function TimeSheetPrivacyPolicyPage() {
                         </a>
                     </li>
                 </ul>
-                <br/>
                 <p>
                     We recommend using the latest version of Timesheet.
                 </p>
+                <br/>
 
                 <strong>11. Data Retention</strong>
                 <p>
@@ -436,6 +430,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     Support submissions made through Tally and historical Google Forms submissions are currently
                     stored without a fixed expiration period unless deleted manually or at your request.
                 </p>
+                <br/>
 
                 <strong>12. Your Privacy Rights</strong>
                 <p>
@@ -447,8 +442,9 @@ export function TimeSheetPrivacyPolicyPage() {
                 <br/>
                 <p>
                     For personal information that we control and can identify, you can submit a privacy request at
-                    [thoughtsafe.bonnstsmark@gmail.com](mailto:thoughtsafe.bonnstsmark@gmail.com).
+                     thoughtsafe.bonnstsmark@gmail.com.
                 </p>
+                <br/>
 
                 <strong>13. Legal Basis and International Processing</strong>
                 <p>
@@ -483,6 +479,7 @@ export function TimeSheetPrivacyPolicyPage() {
                     We may update this Privacy Policy when our features, services, legal requirements or data practices change.
                     The latest version will be published on this page with an updated revision date.
                 </p>
+                <br/>
 
                 <strong>17. Consent and Acceptance</strong>
                 <p>
