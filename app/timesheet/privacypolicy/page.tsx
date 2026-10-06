@@ -16,7 +16,7 @@ export default function TimeSheetPrivacyPolicyPage() {
 
                 <strong>Privacy Policy</strong>
                 <p className="text-stone-400">Originally effective: July 20, 2024</p>
-                <p className="text-stone-400">Last updated: August 8, 2026</p>
+                <p className="text-stone-400">Last updated: October 6, 2026</p>
                 <br/>
 
                 <p>
@@ -229,6 +229,7 @@ export default function TimeSheetPrivacyPolicyPage() {
                     <li>your name, if you choose to provide it;</li>
                     <li>device information;</li>
                     <li>Application version;</li>
+                    <li>your subscription status (Free or Pro);</li>
                     <li>operating system version;</li>
                     <li>up to three screenshots, if you choose to attach them.</li>
                 </ul>
