@@ -10,10 +10,7 @@
 		"predeploy": "node validate-files.js",
 		"deploy": "npx gh-pages -d out --dotfiles",
 		"release": "npm run build && npm run deploy",
-		"app-ads-sync": "node scripts/app-ads-sync.mjs",
-		"app-ads-update": "node scripts/app-ads-cli.mjs || test $? -eq 10",
-		"app-ads-commit": "git add public/app-ads.txt && if git diff --cached --quiet; then echo \"No repo file change to commit; redeploying the existing file.\"; else git commit -m \"Update app-ads.txt from CAS.ai reference\" && git push; fi",
-		"app-ads-update-and-deploy": "node scripts/app-ads-cli.mjs; c=$?; if [ $c -eq 10 ]; then npm run app-ads-commit && npm run build && npm run deploy; elif [ $c -ne 0 ]; then exit $c; else echo \"app-ads.txt is up to date. Nothing to do.\"; fi"
+		"app-ads-sync": "node scripts/app-ads-sync.mjs"
 	},
 	"dependencies": {
 		"@nextui-org/button": "2.2.9",

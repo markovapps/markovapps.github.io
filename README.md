@@ -7,10 +7,19 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Upade app-adds.txt
-```shell
-npm run app-ads-update-and-deploy
-```
+## Update app-ads.txt
+1. On platform.cas.ai (Applications → APP-ADS status → Full file) download the file
+   for the iOS and for the Android account and put both into the `app-ads.txt/` folder
+   (git-ignored). File names must contain `ios` / `android`.
+2. Run the sync — it replaces the CAS.ai section of `public/app-ads.txt`:
+   ```shell
+   npm run app-ads-sync
+   ```
+3. Commit and push `public/app-ads.txt`.
+4. Build & deploy:
+   ```shell
+   npm run release
+   ```
 
 
 
