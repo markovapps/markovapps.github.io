@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CAS.ai files downloaded by hand for scripts/app-ads-sync.mjs
+/app-ads.txt/
